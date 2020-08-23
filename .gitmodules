@@ -16,3 +16,6 @@
 [submodule "diff-so-fancy"]
 	path = diff-so-fancy
 	url = https://github.com/so-fancy/diff-so-fancy.git
+[submodule "git-interactive-rebase-tool"]
+	path = git-interactive-rebase-tool
+	url = https://github.com/MitMaro/git-interactive-rebase-tool.git
