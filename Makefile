@@ -1,16 +1,21 @@
 .DEFAULT_GOAL = all
 
-git: ~/.gitconfig
+~/.gitconfig:
 	ln -fs gitconfig ~/.gitconfig
 
-vim: ~/.vim
+~/.vim:
 	ln -fs vim ~/.vim
 
-vimrc: ~/.vimrc
+~/.vimrc:
 	ln -fs vimrc ~/.vimrc
 
-zshrc: ~/.zshrc
+~/.zshrc:
 	ln -fs zshrc ~/.zshrc
+
+git: ~/.gitconfig
+vim: ~/.vim
+vimrc: ~/.vimrc
+zshrc: ~/.zshrc
 
 all:
 	git vim vimrc zshrc
