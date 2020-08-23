@@ -12,4 +12,5 @@ vimrc:
 zshrc:
 	ln -fs zshrc ~/.zshrc
 
-all: git vim vimrc zshrc
+all:
+	git vim vimrc zshrc
