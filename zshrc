@@ -1,8 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/Users/Jansen/diff-so-fancy:/usr/local/sbin:$PATH
+export PATH=~/diff-so-fancy:/usr/local/sbin:$PATH
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/Jansen/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -68,7 +68,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bundler common-aliases docker gem rbenv)
+plugins=(git bundler common-aliases docker gem rbenv rvm)
 
 source $ZSH/oh-my-zsh.sh
 
