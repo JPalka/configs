@@ -5,6 +5,9 @@ path = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 ~/.gitconfig:
 	ln -fs $(path)gitconfig ~/.gitconfig
 
+~/diff-so-fancy:
+	ln -fs $(path)diff-so-fancy ~/.diff-so-fancy
+
 ~/.vim:
 	ln -fs $(path)vim ~/.vim
 
@@ -22,5 +25,6 @@ vim: ~/.vim
 vimrc: ~/.vimrc
 zshrc: ~/.zshrc
 ohmyzsh: ~/.oh-my-zsh
+diff: ~/diff-so-fancy
 
-all: git vim vimrc zshrc ohmyzsh 
+all: git vim vimrc zshrc ohmyzsh diff
