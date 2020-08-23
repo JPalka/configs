@@ -21,5 +21,6 @@ git: ~/.gitconfig
 vim: ~/.vim
 vimrc: ~/.vimrc
 zshrc: ~/.zshrc
+ohmyzsh: ~/.oh-my-zsh
 
-all: git vim vimrc zshrc
+all: git vim vimrc zshrc ohmyzsh 
