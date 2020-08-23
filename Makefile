@@ -17,5 +17,4 @@ vim: ~/.vim
 vimrc: ~/.vimrc
 zshrc: ~/.zshrc
 
-all:
-	git vim vimrc zshrc
+all: git vim vimrc zshrc
