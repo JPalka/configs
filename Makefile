@@ -6,7 +6,7 @@ path = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 	ln -fs $(path)gitconfig ~/.gitconfig
 
 ~/diff-so-fancy:
-	ln -fs $(path)diff-so-fancy ~/.diff-so-fancy
+	ln -fs $(path)diff-so-fancy ~/diff-so-fancy
 
 ~/.vim:
 	ln -fs $(path)vim ~/.vim
