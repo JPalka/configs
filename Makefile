@@ -3,16 +3,16 @@
 path = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 
 ~/.gitconfig:
-	ln -fs $(path)/gitconfig ~/.gitconfig
+	ln -fs $(path)gitconfig ~/.gitconfig
 
 ~/.vim:
-	ln -fs $(path)/vim ~/.vim
+	ln -fs $(path)vim ~/.vim
 
 ~/.vimrc:
-	ln -fs $(path)/vimrc ~/.vimrc
+	ln -fs $(path)vimrc ~/.vimrc
 
 ~/.zshrc:
-	ln -fs $(path)/zshrc ~/.zshrc
+	ln -fs $(path)zshrc ~/.zshrc
 
 git: ~/.gitconfig
 vim: ~/.vim
