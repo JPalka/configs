@@ -14,6 +14,9 @@ path = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 ~/.zshrc:
 	ln -fs $(path)zshrc ~/.zshrc
 
+~/.oh-my-zsh:
+	ln -fs $(path)oh-my-zsh ~/.oh-my-zsh
+
 git: ~/.gitconfig
 vim: ~/.vim
 vimrc: ~/.vimrc
