@@ -8,9 +8,6 @@ path = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 ~/diff-so-fancy:
 	ln -fs $(path)diff-so-fancy ~/diff-so-fancy
 
-~/git-interactive-rebase-tool:
-	ln -fs $(path)git-interactive-rebase-tool ~/interactive-rebase-tool
-
 ~/.vim:
 	ln -fs $(path)vim ~/.vim
 
@@ -29,6 +26,5 @@ vimrc: ~/.vimrc
 zshrc: ~/.zshrc
 ohmyzsh: ~/.oh-my-zsh
 diff: ~/diff-so-fancy
-rebase-tool: ~/git-interactive-rebase-tool
 
-all: git vim vimrc zshrc ohmyzsh diff rebase-tool
+all: git vim vimrc zshrc ohmyzsh diff
