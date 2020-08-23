@@ -55,4 +55,4 @@
   newNormal = green bold
   newHighlight = green bold 22
 [sequence]
-# editor = interactive-rebase-tool
+  editor = vim
