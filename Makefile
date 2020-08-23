@@ -6,4 +6,7 @@ git:
 vim:
   ln -fs vim ~/.vim
 
-all: git vim
+zshrc:
+  ln -fs zshrc ~/.zshrc
+
+all: git vim zshrc
