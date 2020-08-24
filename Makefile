@@ -20,11 +20,15 @@ path = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 ~/.oh-my-zsh:
 	ln -fs $(path)oh-my-zsh ~/.oh-my-zsh
 
+~/.tmux.conf:
+	ln -fs $(path)tmux.conf ~/.tmux.conf
+
 git: ~/.gitconfig
 vim: ~/.vim
 vimrc: ~/.vimrc
 zshrc: ~/.zshrc
 ohmyzsh: ~/.oh-my-zsh
 diff: ~/diff-so-fancy
+tmux: ~/.tmux.conf
 
-all: git vim vimrc zshrc ohmyzsh diff
+all: git vim vimrc zshrc ohmyzsh diff tmux
