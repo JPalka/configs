@@ -26,7 +26,10 @@ path = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 ~/.tmux.conf:
 	ln -fs $(path)tmux.conf ~/.tmux.conf
 
-git: ~/.gitconfig
+~/.gitignore:
+	ln -fs $(path)gitignore ~/.gitignore
+
+git: ~/.gitconfig ~/.gitignore
 vim: ~/.vim
 vimrc: ~/.vimrc
 zshrc: ~/.zshrc
