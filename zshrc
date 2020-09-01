@@ -99,7 +99,9 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-eval "$(rbenv init -)"
+if which rbenv &> /dev/null; then
+  eval "$(rbenv init -)"
+fi
 
 function ruby_version()
 {
