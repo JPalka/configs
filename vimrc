@@ -19,3 +19,4 @@ let g:rubycomplete_rails = 1
 let g:molokai_original = 1
 let g:rubycomplete_use_bundler = 1
 
+color molokai
