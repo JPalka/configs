@@ -29,8 +29,11 @@ path = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 ~/.gitignore:
 	ln -fs $(path)gitignore ~/.gitignore
 
+~/.vim_backup:
+	ln -fs $(path)vim_backup ~/.vim_backup
+
 git: ~/.gitconfig ~/.gitignore
-vim: ~/.vim
+vim: ~/.vim ~/.vim_backup
 vimrc: ~/.vimrc
 zshrc: ~/.zshrc
 ohmyzsh: ~/.oh-my-zsh

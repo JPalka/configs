@@ -12,6 +12,7 @@ set shiftwidth=2
 set number
 set omnifunc=rubycomplete#Complete
 set term=xterm-256color
+set directory=~/.vim_backup//
 
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
