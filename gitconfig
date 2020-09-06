@@ -1,6 +1,6 @@
 [core]
   pager = diff-so-fancy | less --tabs=2 -RFX
-
+  excludesfile = ~/.gitignore
 # This is Git's per-user configuration file.
 [user]
 # Please adapt and uncomment the following lines:
