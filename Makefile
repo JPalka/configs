@@ -32,6 +32,9 @@ path = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 ~/.vim_backup:
 	ln -fs $(path)vim_backup ~/.vim_backup
 
+~/.fonts:
+	ln -fs $(path)fonts ~/.fonts
+
 git: ~/.gitconfig ~/.gitignore
 vim: ~/.vim ~/.vim_backup
 vimrc: ~/.vimrc
@@ -39,5 +42,6 @@ zshrc: ~/.zshrc
 ohmyzsh: ~/.oh-my-zsh
 diff: ~/diff-so-fancy
 tmux: ~/.tmux.conf
+fonts: ~/.fonts
 
-all: git vim vimrc zshrc ohmyzsh diff tmux
+all: git vim vimrc zshrc ohmyzsh diff tmux fonts
