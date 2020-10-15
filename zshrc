@@ -118,4 +118,4 @@ PROMPT='[$(ruby_version)][%{$fg[blue]%}%d%{$reset_color%}$(git_status)%{$reset_c
 
 preexec () { echo -ne "\e[0m" }
 
-source zsh_alias.sh
+source $HOME/zsh_alias.sh
