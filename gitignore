@@ -3,3 +3,5 @@
 *.swo
 TAGS
 tags
+oh-my-zsh/cache
+fonts/fonts.dir

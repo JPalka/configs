@@ -13,6 +13,7 @@ set number
 set omnifunc=rubycomplete#Complete
 set term=xterm-256color
 set directory=~/.vim_backup//
+set backspace=indent,eol,start
 
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
