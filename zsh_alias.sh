@@ -13,3 +13,4 @@ alias dwebpack='docker-compose run --rm app bin/webpack --watch'
 alias hyde="docker-compose run --rm app bundle exec jekyll build --source jekyll/ --destination app/views/static"
 alias dhamlint="dbundle exec haml -E utf-8 -c $@"
 alias daudit="docker-compose run --rm app bundle exec bundle-audit"
+alias docktrenchremote="ssh jan.palka@office1.int.railwaymen.org -p 10622"
