@@ -1,3 +1,5 @@
+set nocompatible
+
 execute pathogen#infect()
 filetype plugin indent on
 syntax on
@@ -14,7 +16,8 @@ set omnifunc=rubycomplete#Complete
 set term=xterm-256color
 set directory=~/.vim_backup//
 set backspace=indent,eol,start
-
+set paste
+set ruler
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
