@@ -3,5 +3,7 @@
 *.swo
 TAGS
 tags
+.DS_Store
+._.DS_Store
 oh-my-zsh/cache
 fonts/fonts.dir
