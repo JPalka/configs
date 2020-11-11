@@ -16,7 +16,6 @@ set omnifunc=rubycomplete#Complete
 set term=xterm-256color
 set directory=~/.vim_backup//
 set backspace=indent,eol,start
-set paste
 set ruler
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
@@ -42,3 +41,4 @@ nnoremap <C-Right> :tabnext<CR>
 
 nmap <silent> gw :s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR>`'
 nmap <Leader>] :NERDTreeToggle<CR>
+nmap <Leader>[ :NERDTreeFind<CR>
