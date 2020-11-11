@@ -38,3 +38,4 @@ nnoremap <C-Right> :tabnext<CR>
 
 nmap <silent> gw :s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR>`'
 nmap <Leader>] :NERDTreeToggle<CR>
+nmap <Leader>[ :NERDTreeFind<CR>
