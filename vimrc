@@ -45,8 +45,20 @@ let g:rails_projections = {
       \      "alternate": "app/controllers/{}_controller.rb",
       \      "template": "require 'rails_helper'\n\n" .
       \        "RSpec.describe '{}' do\nend",
-      \   }
-      \  }
+      \   },
+      \   "spec/features/*_spec.rb": {
+      \      "command": "feature",
+      \      "alternate": "app/controllers/{}_controller.rb",
+      \      "template": "require 'rails_helper'\n\n" .
+      \        "RSpec.feature '{}' do\nend",
+      \   },
+      \   "spec/system/*_spec.rb": {
+      \      "command": "system",
+      \      "alternate": "app/controllers/{}_controller.rb",
+      \      "template": "require 'rails_helper'\n\n" .
+      \        "RSpec.describe '{}' do\nend",
+      \   },
+      \ }
 
 color molokai
 
