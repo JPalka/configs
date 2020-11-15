@@ -1,4 +1,6 @@
 set nocompatible
+"let $RUBYHOME=$HOME."/.rvm/rubies/default"
+"set rubydll=$HOME/.rvm/rubies/default/lib/libruby.dylib
 
 execute pathogen#infect()
 filetype plugin indent on
@@ -21,7 +23,7 @@ let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
 let g:molokai_original = 1
-let g:rubycomplete_use_bundler = 1
+"let g:rubycomplete_use_bundler = 1
 let g:tmux_navigator_disable_when_zoomed = 1
 let g:rails_projections = {
       \  "app/controllers/*_controller.rb": {
