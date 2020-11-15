@@ -4,8 +4,8 @@
 # This is Git's per-user configuration file.
 [user]
 # Please adapt and uncomment the following lines:
-	name = Anatoly Korenchkin
-	email = anatoly.korenchkin@interia.pl
+	name = Jan Palka
+	email = jan.palka@railwaymen.org
 
 [alias]
   branches = branch -avvl
