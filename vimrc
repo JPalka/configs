@@ -9,6 +9,7 @@ let g:ale_ruby_rubocop_executable = 'bundle'
 packloadall
 silent! helptags ALL
 
+set nomodeline " SECOORITY!!!111!1
 set expandtab
 set tabstop=2
 set softtabstop=2
