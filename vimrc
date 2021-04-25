@@ -26,6 +26,7 @@ let g:rubycomplete_rails = 1
 let g:molokai_original = 1
 "let g:rubycomplete_use_bundler = 1
 let g:tmux_navigator_disable_when_zoomed = 1
+let g:indentLine_enabled = 0
 let g:rails_projections = {
       \  "app/controllers/*_controller.rb": {
       \      "test": [
@@ -82,3 +83,4 @@ nmap <silent> gw :s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR>`'
 nmap <Leader>] :NERDTreeToggle<CR>
 nmap <Leader>[ :NERDTreeFind<CR>
 nmap <Leader>f :setlocal foldmethod=syntax<CR>
+nmap <Leader>i :IndentLinesToggle<CR>
