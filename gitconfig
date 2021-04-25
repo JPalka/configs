@@ -56,3 +56,5 @@
   newHighlight = green bold 22
 [sequence]
   editor = vim
+[pull]
+	ff = only
