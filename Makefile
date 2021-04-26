@@ -43,5 +43,7 @@ ohmyzsh: ~/.oh-my-zsh
 diff: ~/diff-so-fancy
 tmux: ~/.tmux.conf
 fonts: ~/.fonts
+regolith:
+	ln -fs $(path)Xresources-regolith ~/.Xresources-regolith
 
 all: git vim vimrc zshrc ohmyzsh diff tmux fonts

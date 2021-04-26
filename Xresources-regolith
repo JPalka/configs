@@ -1,0 +1,5 @@
+#include "/etc/regolith/styles/ayu-dark/root"
+
+i3-wm.bar.trayoutput: primary
+i3xrocks.date.format2: "%a %d/%m %T"
+i3xrocks.time.interval: 1
