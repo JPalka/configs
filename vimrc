@@ -65,6 +65,7 @@ let g:rails_projections = {
       \ }
 
 color molokai
+hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
 " KEY MAPPINGS
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
