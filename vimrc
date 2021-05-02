@@ -20,6 +20,8 @@ set term=xterm-256color
 set directory=~/.vim_backup//
 set backspace=indent,eol,start
 set ruler
+set showtabline=2
+set laststatus=2
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
