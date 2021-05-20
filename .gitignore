@@ -1,3 +1,4 @@
 vim_backup/*
 !vim_backup/.gitkeep
 oh-my-zsh/cache/
+ctags-5.8/
