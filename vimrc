@@ -9,6 +9,24 @@ let g:ale_ruby_rubocop_executable = 'bundle'
 packloadall
 silent! helptags ALL
 
+" Required for operations modifying multiple buffers like rename.
+set hidden
+
+let g:LanguageClient_serverCommands = {
+    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
+    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
+    \ 'python': ['/usr/local/bin/pyls'],
+    \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
+    \ }
+
+" note that if you are using Plug mapping you should not use `noremap` mappings.
+nmap <F5> <Plug>(lcn-menu)
+" Or map each action separately
+nmap <silent>K <Plug>(lcn-hover)
+nmap <silent> gd <Plug>(lcn-definition)
+nmap <silent> <F2> <Plug>(lcn-rename)
+
+set cot+=preview
 set nomodeline " SECOORITY!!!111!1
 set expandtab
 set tabstop=2
@@ -26,7 +44,7 @@ let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
 let g:molokai_original = 1
-"let g:rubycomplete_use_bundler = 1
+let g:rubycomplete_use_bundler = 1
 let g:tmux_navigator_disable_when_zoomed = 1
 let g:indentLine_enabled = 0
 let g:rails_projections = {
