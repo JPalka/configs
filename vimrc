@@ -16,7 +16,7 @@ let g:LanguageClient_serverCommands = {
     \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
     \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
     \ 'python': ['/usr/local/bin/pyls'],
-    \ 'ruby': ['solargraph', 'stdio'],
+    \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
     \ }
 
 " note that if you are using Plug mapping you should not use `noremap` mappings.
@@ -34,12 +34,14 @@ set softtabstop=2
 set shiftwidth=2
 set number
 set omnifunc=rubycomplete#Complete
+set completefunc=rubycomplete#Complete
 set term=xterm-256color
 set directory=~/.vim_backup//
 set backspace=indent,eol,start
 set ruler
 set showtabline=2
 set laststatus=2
+setglobal tags=./tags;
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
@@ -91,11 +93,11 @@ hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
-nnoremap J :m .+1<CR>
-nnoremap K :m .-2<CR>
+" nnoremap J :m .+1<CR>
+" nnoremap K :m .-2<CR>
 
-xnoremap J :m .+1<CR>
-xnoremap K :m .-2<CR>
+" xnoremap J :m .+1<CR>
+" xnoremap K :m .-2<CR>
 
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
@@ -105,3 +107,6 @@ nmap <Leader>] :NERDTreeToggle<CR>
 nmap <Leader>[ :NERDTreeFind<CR>
 nmap <Leader>f :setlocal foldmethod=syntax<CR>
 nmap <Leader>i :IndentLinesToggle<CR>
+
+nmap <Leader>pp :Dispatch! rake<CR>
+nmap <Leader>pr :tab Copen<CR>
