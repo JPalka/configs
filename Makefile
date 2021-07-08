@@ -43,6 +43,7 @@ ohmyzsh: ~/.oh-my-zsh
 diff: ~/diff-so-fancy
 tmux: ~/.tmux.conf
 fonts: ~/.fonts
+.PHONY: regolith
 regolith:
 	ln -fsb $(path)Xresources-regolith ~/.Xresources-regolith
 	ln -fsb $(path)regolith ~/.config/regolith

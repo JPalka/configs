@@ -5,3 +5,4 @@ TAGS
 .DS_Store
 ._.DS_Store
 oh-my-zsh/cache
+timewarrior/data/**
