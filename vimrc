@@ -32,6 +32,15 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+set smartindent
+set relativenumber
+set nowrap
+set noerrorbells
+set incsearch
+set scrolloff=8
+set colorcolumn=100
+set cmdheight=2
+set updatetime=50
 set number
 set omnifunc=rubycomplete#Complete
 set completefunc=rubycomplete#Complete
@@ -86,21 +95,14 @@ let g:rails_projections = {
       \   },
       \ }
 
+set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P
+
 color molokai
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
 " KEY MAPPINGS
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
-
-" nnoremap J :m .+1<CR>
-" nnoremap K :m .-2<CR>
-
-" xnoremap J :m .+1<CR>
-" xnoremap K :m .-2<CR>
-
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
 
 nmap <silent> gw :s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR>`'
 nmap <Leader>] :NERDTreeToggle<CR>
@@ -110,3 +112,14 @@ nmap <Leader>i :IndentLinesToggle<CR>
 
 nmap <Leader>pp :Dispatch! rake<CR>
 nmap <Leader>pr :tab Copen<CR>
+
+fun! TrimWhitespace()
+  let l:save = winsaveview()
+  keeppatterns %s/\s\+$//e
+  call winrestview(l:save)
+endfun
+
+augroup JJ
+  autocmd!
+  autocmd BufWritePre * :call TrimWhitespace()
+augroup END
