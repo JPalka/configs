@@ -1,0 +1,22 @@
+inc 20210503T085312Z - 20210503T094558Z # VIM "setup taskwarrior shenaningans for vim"
+inc 20210503T094945Z - 20210503T095245Z # VIM "make a cheatsheet for all the plugins and whatnots"
+inc 20210503T095255Z - 20210503T095852Z # VIM "setup taskwarrior shenaningans for vim"
+inc 20210504T140219Z - 20210504T142052Z # "Add my bogus hostname for hetnzer machine on all 3 devajces" settings
+inc 20210504T193318Z - 20210505T004729Z # "Setup database for testing with schema fetching" "smart_z"
+inc 20210505T141058Z - 20210505T144108Z # "Setup devise to use goddamn jwt auth ffs crap bitch" next "smart_z"
+inc 20210505T182634Z - 20210505T183521Z # "Setup rspec and test devise bullshittery" "smart_z"
+inc 20210505T202047Z - 20210506T004633Z # "Setup rspec and test devise bullshittery" "smart_z"
+inc 20210506T085342Z - 20210506T091322Z # "Wyjebać w pizdu springa zanim mnie chuj strzeli" next "smart_z"
+inc 20210506T093632Z - 20210506T095929Z # "Setup spec coverage. Maybe line cov maybe something else" "smart_z"
+inc 20210506T100020Z - 20210506T100354Z # "dodać crud dla counterparties i zależnych." "smart_z"
+inc 20210506T123409Z - 20210506T125550Z # "dodac crud dla brands" "smart_z"
+inc 20210506T130459Z - 20210506T150957Z # "dodac crud dla brands" "smart_z"
+inc 20210506T194014Z - 20210506T210903Z # "dodac crud dla brands" "smart_z"
+inc 20210506T214356Z - 20210506T220229Z # "dodac crud dla manufacturers" "smart_z"
+inc 20210506T220429Z - 20210506T223322Z # "Dodać pipeline dla testów i robocopa" "smart_z"
+inc 20210506T232036Z - 20210506T233550Z # "Checkout timewarrior tui, maybe vit or something else" settings
+inc 20210506T233550Z - 20210507T002511Z # "Add i3block for taskwarrior" settings
+inc 20210507T095814Z - 20210507T101847Z # "dodac crud dla payments" next "smart_z"
+inc 20210507T103240Z - 20210507T111439Z # "Add i3block for timewarrior" next settings
+inc 20210507T154023Z - 20210507T154342Z # "Add i3block for timewarrior" settings
+inc 20210507T164821Z - 20210507T194656Z # "dodac crud dla payments" "smart_z"

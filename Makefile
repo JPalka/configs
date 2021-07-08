@@ -3,37 +3,37 @@
 path = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 
 ~/.gitconfig:
-	ln -fs $(path)gitconfig ~/.gitconfig
+	ln -fsb $(path)gitconfig ~/.gitconfig
 
 ~/diff-so-fancy:
-	ln -fs $(path)diff-so-fancy ~/diff-so-fancy
+	ln -fsb $(path)diff-so-fancy ~/diff-so-fancy
 
 ~/.vim:
-	ln -fs $(path)vim ~/.vim
+	ln -fsb $(path)vim ~/.vim
 
 ~/.vimrc:
-	ln -fs $(path)vimrc ~/.vimrc
+	ln -fsb $(path)vimrc ~/.vimrc
 
 ~/zsh_alias.sh:
-	ln -fs $(path)zsh_alias.sh ~/zsh_alias.sh
+	ln -fsb $(path)zsh_alias.sh ~/zsh_alias.sh
 
 ~/.zshrc: ~/zsh_alias.sh
-	ln -fs $(path)zshrc ~/.zshrc
+	ln -fsb $(path)zshrc ~/.zshrc
 
 ~/.oh-my-zsh:
-	ln -fs $(path)oh-my-zsh ~/.oh-my-zsh
+	ln -fsb $(path)oh-my-zsh ~/.oh-my-zsh
 
 ~/.tmux.conf:
-	ln -fs $(path)tmux.conf ~/.tmux.conf
+	ln -fsb $(path)tmux.conf ~/.tmux.conf
 
 ~/.gitignore:
-	ln -fs $(path)gitignore ~/.gitignore
+	ln -fsb $(path)gitignore ~/.gitignore
 
 ~/.vim_backup:
-	ln -fs $(path)vim_backup ~/.vim_backup
+	ln -fsb $(path)vim_backup ~/.vim_backup
 
 ~/.fonts:
-	ln -fs $(path)fonts ~/.fonts
+	ln -fsb $(path)fonts ~/.fonts
 
 git: ~/.gitconfig ~/.gitignore
 vim: ~/.vim ~/.vim_backup
@@ -44,6 +44,9 @@ diff: ~/diff-so-fancy
 tmux: ~/.tmux.conf
 fonts: ~/.fonts
 regolith:
-	ln -fs $(path)Xresources-regolith ~/.Xresources-regolith
+	ln -fsb $(path)Xresources-regolith ~/.Xresources-regolith
+	ln -fsb $(path)regolith ~/.config/regolith
+	ln -fsb $(path)timewarrior ~/.timewarrior
+	ln -fsb $(path)scripts ~/scripts
 
 all: git vim vimrc zshrc ohmyzsh diff tmux fonts

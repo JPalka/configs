@@ -1,0 +1,356 @@
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210503T085312Z","tags":["VIM","setup taskwarrior shenaningans for vim"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210503T085312Z","tags":["VIM","setup taskwarrior shenaningans for vim"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210503T085312Z","end":"20210503T094558Z","tags":["VIM","setup taskwarrior shenaningans for vim"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210503T094945Z","tags":["VIM","make a cheatsheet for all the plugins and whatnots"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210503T094945Z","tags":["VIM","make a cheatsheet for all the plugins and whatnots"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210503T094945Z","end":"20210503T095245Z","tags":["VIM","make a cheatsheet for all the plugins and whatnots"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210503T095255Z","tags":["VIM","setup taskwarrior shenaningans for vim"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210503T095255Z","tags":["VIM","setup taskwarrior shenaningans for vim"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210503T095255Z","end":"20210503T095852Z","tags":["VIM","setup taskwarrior shenaningans for vim"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210504T140219Z","tags":["Add my bogus hostname for hetnzer machine on all 3 devajces","settings"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210504T140219Z","tags":["Add my bogus hostname for hetnzer machine on all 3 devajces","settings"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210504T140219Z","end":"20210504T142052Z","tags":["Add my bogus hostname for hetnzer machine on all 3 devajces","settings"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210504T193318Z","tags":["Setup database for testing with schema fetching","smart_z"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210504T193318Z","tags":["Setup database for testing with schema fetching","smart_z"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210504T193318Z","end":"20210505T004729Z","tags":["Setup database for testing with schema fetching","smart_z"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210505T141058Z","tags":["Setup devise to use goddamn jwt auth ffs crap bitch","next","smart_z"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210505T141058Z","tags":["Setup devise to use goddamn jwt auth ffs crap bitch","next","smart_z"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210505T141058Z","end":"20210505T144108Z","tags":["Setup devise to use goddamn jwt auth ffs crap bitch","next","smart_z"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210505T182634Z","tags":["Setup rspec and test devise bullshittery","smart_z"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210505T182634Z","tags":["Setup rspec and test devise bullshittery","smart_z"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210505T182634Z","end":"20210505T183521Z","tags":["Setup rspec and test devise bullshittery","smart_z"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210505T202047Z","tags":["Setup rspec and test devise bullshittery","smart_z"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210505T202047Z","tags":["Setup rspec and test devise bullshittery","smart_z"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210505T202047Z","end":"20210506T004633Z","tags":["Setup rspec and test devise bullshittery","smart_z"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210506T085342Z","tags":["Wyjebać w pizdu springa zanim mnie chuj strzeli","next","smart_z"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210506T085342Z","tags":["Wyjebać w pizdu springa zanim mnie chuj strzeli","next","smart_z"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210506T085342Z","end":"20210506T091322Z","tags":["Wyjebać w pizdu springa zanim mnie chuj strzeli","next","smart_z"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210506T093632Z","tags":["Setup spec coverage. Maybe line cov maybe something else","smart_z"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210506T093632Z","tags":["Setup spec coverage. Maybe line cov maybe something else","smart_z"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210506T093632Z","end":"20210506T095929Z","tags":["Setup spec coverage. Maybe line cov maybe something else","smart_z"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210506T100020Z","tags":["dodać crud dla counterparties i zależnych.","smart_z"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210506T100020Z","tags":["dodać crud dla counterparties i zależnych.","smart_z"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210506T100020Z","end":"20210506T100354Z","tags":["dodać crud dla counterparties i zależnych.","smart_z"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210506T123409Z","tags":["dodac crud dla brands","smart_z"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210506T123409Z","tags":["dodac crud dla brands","smart_z"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210506T123409Z","end":"20210506T125550Z","tags":["dodac crud dla brands","smart_z"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210506T130459Z","tags":["dodac crud dla brands","smart_z"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210506T130459Z","tags":["dodac crud dla brands","smart_z"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210506T130459Z","end":"20210506T150957Z","tags":["dodac crud dla brands","smart_z"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210506T194014Z","tags":["dodac crud dla brands","smart_z"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210506T194014Z","tags":["dodac crud dla brands","smart_z"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210506T194014Z","end":"20210506T210903Z","tags":["dodac crud dla brands","smart_z"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210506T214356Z","tags":["dodac crud dla manufacturers","smart_z"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210506T214356Z","tags":["dodac crud dla manufacturers","smart_z"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210506T214356Z","end":"20210506T220229Z","tags":["dodac crud dla manufacturers","smart_z"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210506T220429Z","tags":["Dodać pipeline dla testów i robocopa","smart_z"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210506T220429Z","tags":["Dodać pipeline dla testów i robocopa","smart_z"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210506T220429Z","end":"20210506T223322Z","tags":["Dodać pipeline dla testów i robocopa","smart_z"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210506T232036Z","tags":["Checkout timewarrior tui, maybe vit or something else","settings"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210506T232036Z","tags":["Checkout timewarrior tui, maybe vit or something else","settings"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210506T232036Z","end":"20210506T233550Z","tags":["Checkout timewarrior tui, maybe vit or something else","settings"]}
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210506T233550Z","tags":["Add i3block for taskwarrior","settings"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210506T233550Z","tags":["Add i3block for taskwarrior","settings"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210506T233550Z","end":"20210507T002511Z","tags":["Add i3block for taskwarrior","settings"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210507T095814Z","tags":["dodac crud dla payments","next","smart_z"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210507T095814Z","tags":["dodac crud dla payments","next","smart_z"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210507T095814Z","end":"20210507T101847Z","tags":["dodac crud dla payments","next","smart_z"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210507T103240Z","tags":["Add i3block for timewarrior","settings"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210507T103240Z","tags":["Add i3block for timewarrior","settings"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210507T103240Z"}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210507T103240Z"}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210507T103240Z","tags":["Add i3block for timewarrior","next","settings"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210507T103240Z","tags":["Add i3block for timewarrior","next","settings"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210507T103240Z","end":"20210507T104302Z","tags":["Add i3block for timewarrior","next","settings"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210507T104334Z","tags":["Add i3block for timewarrior","next","settings"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210507T104334Z","tags":["Add i3block for timewarrior","next","settings"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210507T104334Z","end":"20210507T110504Z","tags":["Add i3block for timewarrior","next","settings"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210507T110518Z","tags":["Add i3block for timewarrior","next","settings"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210507T110518Z","tags":["Add i3block for timewarrior","next","settings"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210507T110518Z","end":"20210507T111439Z","tags":["Add i3block for timewarrior","next","settings"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210507T110518Z","end":"20210507T111439Z","tags":["Add i3block for timewarrior","next","settings"]}
+  after: 
+  type: interval
+  before: {"id":2,"start":"20210507T104334Z","end":"20210507T110504Z","tags":["Add i3block for timewarrior","next","settings"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":2,"start":"20210507T104334Z","end":"20210507T111439Z","tags":["Add i3block for timewarrior","next","settings"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210507T104334Z","end":"20210507T111439Z","tags":["Add i3block for timewarrior","next","settings"]}
+  after: 
+  type: interval
+  before: {"id":2,"start":"20210507T103240Z","end":"20210507T104302Z","tags":["Add i3block for timewarrior","next","settings"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":2,"start":"20210507T103240Z","end":"20210507T111439Z","tags":["Add i3block for timewarrior","next","settings"]}
+txn:
+  type: config
+  before: 
+  after: temp.report.start: = 01-01-2020
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210507T154023Z","tags":["Add i3block for timewarrior","settings"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210507T154023Z","tags":["Add i3block for timewarrior","settings"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210507T154023Z","end":"20210507T154342Z","tags":["Add i3block for timewarrior","settings"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210507T164821Z","tags":["dodac crud dla payments","smart_z"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210507T164821Z","tags":["dodac crud dla payments","smart_z"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210507T164821Z","end":"20210507T194656Z","tags":["dodac crud dla payments","smart_z"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210604T101028Z","tags":["dodac crud dla trade_network i discounts i prices","smart_z"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210604T101028Z","tags":["dodac crud dla trade_network i discounts i prices","smart_z"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210604T101028Z","end":"20210604T101252Z","tags":["dodac crud dla trade_network i discounts i prices","smart_z"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210604T102431Z","tags":["Setup vim auto completion for rails and ruby","VIM"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210604T102431Z","tags":["Setup vim auto completion for rails and ruby","VIM"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210604T102431Z","end":"20210604T113632Z","tags":["Setup vim auto completion for rails and ruby","VIM"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210604T140345Z","tags":["dodać crud dla counterparties i zależnych.","smart_z"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210604T140345Z","tags":["dodać crud dla counterparties i zależnych.","smart_z"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210604T140345Z","end":"20210604T140355Z","tags":["dodać crud dla counterparties i zależnych.","smart_z"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210704T210717Z","tags":["smart_z","uzupelnic routy w postmanie do tesztowania"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210704T210717Z","tags":["smart_z","uzupelnic routy w postmanie do tesztowania"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210704T210717Z","end":"20210704T223902Z","tags":["smart_z","uzupelnic routy w postmanie do tesztowania"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20210704T225734Z","tags":["smart_z","uzupelnic routy w postmanie do tesztowania"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20210704T225734Z","tags":["smart_z","uzupelnic routy w postmanie do tesztowania"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20210704T225734Z","end":"20210704T225738Z","tags":["smart_z","uzupelnic routy w postmanie do tesztowania"]}

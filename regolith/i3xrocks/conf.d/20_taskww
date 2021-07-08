@@ -1,0 +1,14 @@
+# taskw
+#
+# Display active taskwarrior tasks
+
+[taskw]
+command=/home/jony/scripts/taskw.py
+interval=1
+TASKW_TF=true
+TIMEW_TF=true
+TIMEW_DESC_OVERRIDE=false
+TASKW_MAX_LENGTH = 35
+TASKW_NOTASK_MSG=--No Task--
+TASKW_SORT_URGENCY=false
+TASKW_PENDING_TF=false
