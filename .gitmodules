@@ -62,6 +62,3 @@
 [submodule "vim/bundle/vimwiki"]
 	path = vim/bundle/vimwiki
 	url = git@github.com:vimwiki/vimwiki.git
-[submodule "vim/bundle/LanguageClient-neovim"]
-	path = vim/bundle/LanguageClient-neovim
-	url = git@github.com:autozimu/LanguageClient-neovim.git
