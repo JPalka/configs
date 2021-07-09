@@ -122,3 +122,6 @@ PROMPT='[$(ruby_version)][%{$fg[blue]%}%d%{$reset_color%}$(git_status)%{$reset_c
 preexec () { echo -ne "\e[0m" }
 
 source $HOME/zsh_alias.sh
+
+# added by pipx (https://github.com/pipxproject/pipx)
+export PATH="/home/jpalka/.local/bin:$PATH"

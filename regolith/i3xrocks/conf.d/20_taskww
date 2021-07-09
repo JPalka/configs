@@ -3,7 +3,7 @@
 # Display active taskwarrior tasks
 
 [taskw]
-command=/home/jony/scripts/taskw.py
+command=$HOME/scripts/taskw.py
 interval=1
 TASKW_TF=true
 TIMEW_TF=true

@@ -46,8 +46,8 @@ fonts: ~/.fonts
 .PHONY: regolith
 regolith:
 	ln -fsb $(path)Xresources-regolith ~/.Xresources-regolith
-	ln -fsb $(path)regolith ~/.config/regolith
-	ln -fsb $(path)timewarrior ~/.timewarrior
-	ln -fsb $(path)scripts ~/scripts
+	ln -fsb $(path)regolith ~/.config/
+	ln -fsb $(path)timewarrior ~/
+	ln -fsb $(path)scripts ~/
 
 all: git vim vimrc zshrc ohmyzsh diff tmux fonts
