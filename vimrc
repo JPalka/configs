@@ -34,7 +34,6 @@ set softtabstop=2
 set shiftwidth=2
 set smartindent
 set relativenumber
-set nowrap
 set noerrorbells
 set incsearch
 set scrolloff=8
