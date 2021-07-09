@@ -1,9 +1,11 @@
 #!/bin/bash
 
+source $HOME/.env.sh
+
 LABEL_ICON=${icon:-$(xrescat i3xrocks.label.todo )}
 LABEL_COLOR=${label_color:-$(xrescat i3xrocks.label.color "#7B8394")}
 VALUE_COLOR=${color:-$(xrescat i3xrocks.value.color "#D8DEE9")}
 VALUE_FONT=${font:-$(xrescat i3xrocks.value.font "Source Code Pro Medium 13")}
-TASK_COUNT=$(task rc.verbose=nothing count status:pending)
+TASK_COUNT=$(task rc.verbose=nothing count status:pending $TASKW_DEFAULT_FILTER)
 echo "<span color=\"${LABEL_COLOR}\">$LABEL_ICON</span><span font_desc=\"${VALUE_FONT}\" color=\"${VALUE_COLOR}\"> $TASK_COUNT </span>"
 

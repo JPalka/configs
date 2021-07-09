@@ -642,8 +642,7 @@ exec_always --no-startup-id $i3-wm.program.compositor
 
 # Start Rofication for notifications
 set_from_resource $i3-wm.program.notifications i3-wm.program.notifications /usr/bin/rofication-daemon
-# exec --no-startup-id $i3-wm.program.notifications
-exec --no-startup-id /usr/bin/dunst
+exec --no-startup-id $i3-wm.program.notifications
 
 # Launch first time user experience script
 set_from_resource $i3-wm.program.ftui i3-wm.program.ftui /usr/bin/regolith-ftue
@@ -666,3 +665,14 @@ set_from_resource $i3-wm.program.2 i3-wm.program.2 :
 exec --no-startup-id $i3-wm.program.2
 set_from_resource $i3-wm.program.3 i3-wm.program.3 :
 exec --no-startup-id $i3-wm.program.3
+
+###############################################################################
+# Custom shenaningans
+###############################################################################
+
+## Variables ##
+set_from_resource $i3-wm.taskw.default_filter i3-wm.taskw.default_filter ''
+## Launch vit ##
+set_from_resource $i3-wm.binding.vit i3-wm.binding.vit Shift+d
+set_from_resource $i3-wm.program.vit i3-wm.program.vit /usr/bin/i3-msg -q exec "/usr/bin/gnome-terminal --class=floating_window -x" ~/scripts/start_vit.sh
+bindsym $mod+$i3-wm.binding.vit exec $i3-wm.program.vit

@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/bin:$HOME/interactive-rebase-tool:$HOME/diff-so-fancy:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$HOME/bin:$HOME/interactive-rebase-tool:$HOME/diff-so-fancy:/usr/local/bin:/usr/local/sbin:$PATH:$HOME/scripts
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export TERM=xterm-256color
@@ -125,3 +125,6 @@ source $HOME/zsh_alias.sh
 
 # added by pipx (https://github.com/pipxproject/pipx)
 export PATH="/home/jpalka/.local/bin:$PATH"
+
+# source file containing env variables used by various scripts
+source $HOME/.env.sh
