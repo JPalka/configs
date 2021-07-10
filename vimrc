@@ -1,6 +1,4 @@
 set nocompatible
-"let $RUBYHOME=$HOME."/.rvm/rubies/default"
-"set rubydll=$HOME/.rvm/rubies/default/lib/libruby.dylib
 
 execute pathogen#infect()
 filetype plugin indent on
@@ -11,13 +9,6 @@ silent! helptags ALL
 
 " Required for operations modifying multiple buffers like rename.
 set hidden
-
-let g:LanguageClient_serverCommands = {
-    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
-    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
-    \ 'python': ['/usr/local/bin/pyls'],
-    \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
-    \ }
 
 " note that if you are using Plug mapping you should not use `noremap` mappings.
 nmap <F5> <Plug>(lcn-menu)
@@ -41,8 +32,6 @@ set colorcolumn=100
 set cmdheight=2
 set updatetime=50
 set number
-set omnifunc=rubycomplete#Complete
-set completefunc=rubycomplete#Complete
 set term=xterm-256color
 set directory=~/.vim_backup//
 set backspace=indent,eol,start
@@ -50,11 +39,14 @@ set ruler
 set showtabline=2
 set laststatus=2
 setglobal tags=./tags;
+
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
-let g:molokai_original = 1
 let g:rubycomplete_use_bundler = 1
+set omnifunc=rubycomplete#Complete
+
+let g:molokai_original = 1
 let g:tmux_navigator_disable_when_zoomed = 1
 let g:indentLine_enabled = 0
 let g:rails_projections = {
