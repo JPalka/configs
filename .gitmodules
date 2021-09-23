@@ -65,3 +65,6 @@
 [submodule "vim/bundle/vim-vividchalk"]
 	path = vim/bundle/vim-vividchalk
 	url = git@github.com:tpope/vim-vividchalk.git
+[submodule "vim/bundle/vim-distinguished"]
+	path = vim/bundle/vim-distinguished
+	url = git@github.com:Lokaltog/vim-distinguished.git

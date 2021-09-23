@@ -39,7 +39,7 @@ let g:rubycomplete_rails = 1
 let g:rubycomplete_use_bundler = 1
 set omnifunc=rubycomplete#Complete
 
-let g:molokai_original = 1
+" let g:molokai_original = 1
 let g:tmux_navigator_disable_when_zoomed = 1
 let g:indentLine_enabled = 0
 let g:rails_projections = {
@@ -81,7 +81,7 @@ let g:rails_projections = {
 
 set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P
 
-color molokai
+color distinguished
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
 " KEY MAPPINGS
