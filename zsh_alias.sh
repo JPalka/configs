@@ -8,6 +8,7 @@ alias dbundle='docker-compose run --rm app bundle'
 alias drails='docker-compose run --rm app bundle exec rails'
 alias dstandard='docker-compose run --rm app bundle exec standardrb'
 alias dbash='docker-compose run --rm app bash'
+alias dsh='docker-compose run --rm app sh'
 alias dyarn='docker-compose run --rm app bundle exec yarn'
 alias dwebpack='docker-compose run --rm app bin/webpack --watch'
 alias hyde="docker-compose run --rm app bundle exec jekyll build --source jekyll/ --destination app/views/static"

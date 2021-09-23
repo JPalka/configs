@@ -10,13 +10,7 @@ silent! helptags ALL
 " Required for operations modifying multiple buffers like rename.
 set hidden
 
-" note that if you are using Plug mapping you should not use `noremap` mappings.
-nmap <F5> <Plug>(lcn-menu)
-" Or map each action separately
-nmap <silent>K <Plug>(lcn-hover)
-nmap <silent> gd <Plug>(lcn-definition)
-nmap <silent> <F2> <Plug>(lcn-rename)
-
+set shell=zsh
 set cot+=preview
 set nomodeline " SECOORITY!!!111!1
 set expandtab
@@ -28,7 +22,6 @@ set relativenumber
 set noerrorbells
 set incsearch
 set scrolloff=8
-set colorcolumn=100
 set cmdheight=2
 set updatetime=50
 set number
@@ -92,13 +85,15 @@ color molokai
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
 " KEY MAPPINGS
+let mapleader=" "
+
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 nmap <silent> gw :s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR>`'
-nmap <Leader>] :NERDTreeToggle<CR>
-nmap <Leader>[ :NERDTreeFind<CR>
-nmap <Leader>f :setlocal foldmethod=syntax<CR>
+nmap <Leader>t :NERDTreeToggle<CR>
+nmap <Leader>f :NERDTreeFind<CR>
+" nmap <Leader>f :setlocal foldmethod=syntax<CR>
 nmap <Leader>i :IndentLinesToggle<CR>
 
 nmap <Leader>pp :Dispatch! rake<CR>
@@ -114,3 +109,5 @@ augroup JJ
   autocmd!
   autocmd BufWritePre * :call TrimWhitespace()
 augroup END
+
+command -nargs=* Dbundle Dispatch dbundle <args>

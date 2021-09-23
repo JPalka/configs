@@ -19,6 +19,7 @@ path = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 
 ~/.zshrc: ~/zsh_alias.sh
 	ln -fsb $(path)zshrc ~/.zshrc
+	ln -fsb $(path)zshrc ~/.zshenv
 
 ~/.oh-my-zsh:
 	ln -fsb $(path)oh-my-zsh ~/.oh-my-zsh
