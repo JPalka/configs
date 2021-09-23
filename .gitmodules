@@ -62,3 +62,6 @@
 [submodule "vim/bundle/vimwiki"]
 	path = vim/bundle/vimwiki
 	url = git@github.com:vimwiki/vimwiki.git
+[submodule "vim/bundle/vim-vividchalk"]
+	path = vim/bundle/vim-vividchalk
+	url = git@github.com:tpope/vim-vividchalk.git
