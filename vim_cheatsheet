@@ -1,0 +1,62 @@
+VIM CHEATSHEET NAJS FINGS
+
+zz - Center screen on the thing on cursor
+zb - show lines over the thing on cursor
+zt - show lines under the thing on cursor
+*/& - get to next/prev occurence of word under
+m<register letter> - make a mark
+`<letter> - go to mark
+'<letter> - go to first char in marks line
+"<letter> + d/y/whatever - delete/yank/whatever into the register
+
+INSERT MODE
+CTRL_r + register - paste text
+CTRL_a - paste text in . register
+
+vim surround
+cs([ - replace '(' with '['
+ysiw] - wrap word with '[]' no spaces
+ysiw[ - wrap word with '[]' spaces
+yss) - wrap whole line
+ds( - unwrap
+
+unimpaired vim
+[e/]e - switch line with the line on top/bottom
+[b/]b - next/prev buffer
+[l/]l - next/prev linter bitching
+[u/]u - urlencode/urldecode
+you - toggle 'cursorcolumn'
+=p - paste with reindent
+[<space>/[<space> - add empty line after/before cursor
+
+vim-rails
+:help rails
+CTRL-W_f - open thing under cursor in new split
+CTRL-W_gf - open thing under cursor in new tab
+:Clog <env> - log file for environment
+:Preview! - open current path for file in netrw
+
+rubymotion
+text objects
+am - whole method
+im - method body
+
+dispatch
+:Copen - open buffer with latest output from tasks run via :Rails, etc.
+maps
+m<CR>                   |:Make|<CR>
+m<Space>                |:Make|<Space>
+m!                      |:Make|!
+m?                      Show 'makeprg'
+`<CR>                   |:Dispatch|<CR>
+`<Space>                |:Dispatch|<Space>
+`!                      |:Dispatch|!
+`?                      |:FocusDispatch|<CR>
+'<CR>                   |:Start|<CR>
+'<Space>                |:Start|<Space>
+'!                      |:Start|!
+'?                      Show |b:start|
+g'<CR>                  |:Spawn|<CR>
+g'<Space>               |:Spawn|<Space>
+g'!                     |:Spawn|!
+g'?                     Show 'shell'
