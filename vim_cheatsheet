@@ -60,3 +60,14 @@ g'<CR>                  |:Spawn|<CR>
 g'<Space>               |:Spawn|<Space>
 g'!                     |:Spawn|!
 g'?                     Show 'shell'
+
+CALENDAR
+:Calendar -split=vertical
+
+vim-fugitive
+:Gcgrep - git grep
+
+ctrlp
+<c-d> - toggle filename/full path search
+<c-r> - toggle regexp search
+<c-b> + <c-f> - scroll search modes

@@ -84,6 +84,12 @@ set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P
 color distinguished
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
+" CTRLP config
+
+let g:ctrlp_use_caching = 1
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_show_hidden = 1
+
 " KEY MAPPINGS
 let mapleader=" "
 
