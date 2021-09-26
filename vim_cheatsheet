@@ -71,3 +71,8 @@ ctrlp
 <c-d> - toggle filename/full path search
 <c-r> - toggle regexp search
 <c-b> + <c-f> - scroll search modes
+<c-n> + <c-p> - scroll prompt history
+<c-t> <c-v> <c-s> - open file in new tab/vert/hori split
+<c-y> - create file and directories
+<F5> - purge cache
+<c-\> - interactive paste dialog

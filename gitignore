@@ -6,3 +6,4 @@ TAGS
 ._.DS_Store
 oh-my-zsh/cache
 timewarrior/data/**
+solargraph_rails.rb

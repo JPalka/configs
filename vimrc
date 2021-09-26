@@ -3,13 +3,11 @@ set nocompatible
 execute pathogen#infect()
 filetype plugin indent on
 syntax on
-let g:ale_ruby_rubocop_executable = 'bundle'
 packloadall
 silent! helptags ALL
 
 " Required for operations modifying multiple buffers like rename.
 set hidden
-
 set shell=zsh
 set cot+=preview
 set nomodeline " SECOORITY!!!111!1
@@ -33,11 +31,12 @@ set showtabline=2
 set laststatus=2
 setglobal tags=./tags;
 
-let g:rubycomplete_buffer_loading = 1
-let g:rubycomplete_classes_in_global = 1
-let g:rubycomplete_rails = 1
-let g:rubycomplete_use_bundler = 1
-set omnifunc=rubycomplete#Complete
+" let g:rubycomplete_buffer_loading = 1
+" let g:rubycomplete_classes_in_global = 1
+" let g:rubycomplete_rails = 1
+" let g:rubycomplete_use_bundler = 1
+" set omnifunc=rubycomplete#Complete
+set completeopt=menu,menuone,popup,noselect,noinsert
 
 " let g:molokai_original = 1
 let g:tmux_navigator_disable_when_zoomed = 1
@@ -89,6 +88,20 @@ hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 let g:ctrlp_use_caching = 1
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_show_hidden = 1
+
+" ALE config
+" let g:ale_completion_enabled = 1
+let g:ale_ruby_rubocop_executable = 'bundle'
+" let g:ale_linters = {
+  " \ 'ruby': ['solargraph']
+  " \}
+
+" COC config
+let g:coc_global_extensions = ['coc-solargraph']
+
+" Supertab config
+let g:SuperTabMappingForward = '<s-tab>'
+let g:SuperTabMappingBackward = '<tab>'
 
 " KEY MAPPINGS
 let mapleader=" "
