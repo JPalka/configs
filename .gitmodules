@@ -74,3 +74,6 @@
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
 	url = git@github.com:ervandew/supertab.git
+[submodule "vim_src/vim"]
+	path = vim_src/vim
+	url = git@github.com:vim/vim.git
