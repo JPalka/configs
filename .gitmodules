@@ -77,3 +77,6 @@
 [submodule "vim_src/vim"]
 	path = vim_src/vim
 	url = git@github.com:vim/vim.git
+[submodule "rtw89"]
+	path = rtw89
+	url = git@github.com:lwfinger/rtw89.git
