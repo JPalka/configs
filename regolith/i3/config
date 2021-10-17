@@ -676,3 +676,6 @@ set_from_resource $i3-wm.taskw.default_filter i3-wm.taskw.default_filter ''
 set_from_resource $i3-wm.binding.vit i3-wm.binding.vit Shift+d
 set_from_resource $i3-wm.program.vit i3-wm.program.vit /usr/bin/i3-msg -q exec "/usr/bin/gnome-terminal --class=floating_window -x" ~/scripts/start_vit.sh
 bindsym $mod+$i3-wm.binding.vit exec $i3-wm.program.vit
+
+## multi screen bindings ##
+bindsym $mod+p move workspace to output right
