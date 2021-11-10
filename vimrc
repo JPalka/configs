@@ -118,6 +118,8 @@ nmap <Leader>i :IndentLinesToggle<CR>
 nmap <Leader>pp :Dispatch! rake<CR>
 nmap <Leader>pr :tab Copen<CR>
 
+nmap <Leader>pt <Plug>(coc-format-selected)
+
 fun! TrimWhitespace()
   let l:save = winsaveview()
   keeppatterns %s/\s\+$//e
