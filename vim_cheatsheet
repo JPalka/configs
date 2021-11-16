@@ -76,3 +76,6 @@ ctrlp
 <c-y> - create file and directories
 <F5> - purge cache
 <c-\> - interactive paste dialog
+
+ULTISNIPS
+:UltiSnipsEdit - Edits snippets for current file

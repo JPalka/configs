@@ -4,5 +4,6 @@
   "solargraph.formatting": true,
   "solargraph.useBundler": true,
 
-  "tsserver.disableAutomaticTypeAcquisition": false
+  "tsserver.disableAutomaticTypeAcquisition": false,
+  "snippets.userSnippetsDirectory": "~/.vim/snippets/"
 }

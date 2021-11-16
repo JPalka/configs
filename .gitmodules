@@ -80,3 +80,6 @@
 [submodule "rtw89"]
 	path = rtw89
 	url = git@github.com:lwfinger/rtw89.git
+[submodule "vim/bundle/ultisnips"]
+	path = vim/bundle/ultisnips
+	url = git@github.com:SirVer/ultisnips.git
