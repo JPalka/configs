@@ -83,3 +83,6 @@
 [submodule "vim/bundle/ultisnips"]
 	path = vim/bundle/ultisnips
 	url = git@github.com:SirVer/ultisnips.git
+[submodule "vim/bundle/vim-ripgrep"]
+	path = vim/bundle/vim-ripgrep
+	url = git@github.com:jremmen/vim-ripgrep.git

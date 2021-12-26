@@ -103,6 +103,9 @@ let g:coc_global_extensions = ['coc-solargraph']
 let g:SuperTabMappingForward = '<s-tab>'
 let g:SuperTabMappingBackward = '<tab>'
 
+" Ripgrep config
+let g:rg_binary = 'ag'
+
 " Ultisnips config
 let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
