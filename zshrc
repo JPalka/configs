@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/bin:$HOME/interactive-rebase-tool:$HOME/diff-so-fancy:/usr/local/bin:/usr/local/sbin:$PATH:$HOME/scripts
+export PATH=$HOME/bin:$HOME/interactive-rebase-tool:$HOME/diff-so-fancy:/usr/local/bin:/usr/local/sbin:$PATH:$HOME/scripts:$HOME/.local/bin
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export TERM=xterm-256color
@@ -132,3 +132,6 @@ source $HOME/.env.sh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# add go binary to path
+export PATH="$PATH:/usr/local/go/bin"

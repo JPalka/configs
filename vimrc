@@ -138,6 +138,7 @@ nmap <Leader>t :NERDTreeToggle<CR>
 nmap <Leader>f :NERDTreeFind<CR>
 " nmap <Leader>f :setlocal foldmethod=syntax<CR>
 nmap <Leader>i :IndentLinesToggle<CR>
+nmap <Leader>T :tab term<CR>
 
 nmap <Leader>pp :Dispatch! rake<CR>
 nmap <Leader>pr :tab Copen<CR>
