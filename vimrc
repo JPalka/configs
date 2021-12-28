@@ -88,6 +88,20 @@ hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 let g:ctrlp_use_caching = 1
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '\v[\/](node_modules|storage|\.git)$',
+  \ }
+let g:ctrlp_lazy_update = 1
+let g:ctrlp_abbrev = {
+  \ 'gmode': 't',
+  \ 'abbrevs': [
+    \ {
+      \ 'pattern': '^cd js',
+      \ 'expanded': 'app/javascript',
+      \ 'mode': 'pfrz',
+    \ },
+    \ ]
+  \ }
 
 " ALE config
 " let g:ale_completion_enabled = 1
