@@ -111,7 +111,7 @@ let g:ale_ruby_rubocop_executable = 'bundle'
   " \}
 
 " COC config
-let g:coc_global_extensions = ['coc-solargraph']
+let g:coc_global_extensions = ['coc-solargraph', 'coc-webpack', 'coc-yaml', 'coc-html']
 
 " Supertab config
 let g:SuperTabMappingForward = '<s-tab>'
@@ -159,8 +159,24 @@ nmap <Leader>T :tab term<CR>
 
 nmap <Leader>pp :Dispatch! rake<CR>
 nmap <Leader>pr :tab Copen<CR>
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gh <Plug>(coc-references)
 
-nmap <Leader>pt <Plug>(coc-format-selected)
+nmap <silent> <Leader>P :call CocAction('format')<cr>
+
+" show documentation
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+nnoremap <silent> <Leader>d :call <SID>show_documentation()<CR>
+
+" nmap <Leader>pt <Plug>(coc-format-selected)
 
 fun! TrimWhitespace()
   let l:save = winsaveview()
