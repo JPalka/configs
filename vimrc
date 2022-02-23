@@ -166,6 +166,9 @@ nmap <silent> gh <Plug>(coc-references)
 
 nmap <silent> <Leader>P :call CocAction('format')<cr>
 
+" replace word under cursor
+:nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+
 " show documentation
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
