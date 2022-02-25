@@ -156,8 +156,9 @@ nmap <Leader>f :NERDTreeFind<CR>
 nmap <Leader>i :IndentLinesToggle<CR>
 nmap <Leader>T :tab term<CR>
 
-nmap <Leader>pp :Dispatch! rake<CR>
+nmap <Leader>pp :Dispatch! bundle exec rake<CR>
 nmap <Leader>pr :tab Copen<CR>
+nmap <Leader>ar :Dispatch! bundle exec rubocop -A %<CR>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
