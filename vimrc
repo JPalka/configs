@@ -103,13 +103,6 @@ let g:ctrlp_abbrev = {
     \ ]
   \ }
 
-" ALE config
-" let g:ale_completion_enabled = 1
-let g:ale_ruby_rubocop_executable = 'bundle'
-" let g:ale_linters = {
-  " \ 'ruby': ['solargraph']
-  " \}
-
 " COC config
 let g:coc_global_extensions = ['coc-solargraph', 'coc-webpack', 'coc-yaml', 'coc-html']
 
@@ -146,9 +139,6 @@ xmap <leader>x  <Plug>(coc-convert-snippet)
 " KEY MAPPINGS
 let mapleader=" "
 
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
-
 nmap <silent> gw :s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR>`'
 nmap <Leader>t :NERDTreeToggle<CR>
 nmap <Leader>f :NERDTreeFind<CR>
@@ -163,6 +153,8 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gh <Plug>(coc-references)
+xmap <leader>a <Plug>(coc-codeaction-selected)
+nmap <leader>a <Plug>(coc-codeaction-selected)
 
 nmap <silent> <Leader>P :call CocAction('format')<cr>
 

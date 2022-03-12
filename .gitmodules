@@ -86,3 +86,9 @@
 [submodule "vim/bundle/vim-ripgrep"]
 	path = vim/bundle/vim-ripgrep
 	url = git@github.com:jremmen/vim-ripgrep.git
+[submodule "vim/bundle/vim-polyglot"]
+	path = vim/bundle/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "vim/bundle/coc-react-refactor"]
+	path = vim/bundle/coc-react-refactor
+	url = https://github.com/fannheyward/coc-react-refactor.git
