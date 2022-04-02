@@ -83,26 +83,6 @@ set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P
 color distinguished
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
-" CTRLP config
-
-let g:ctrlp_use_caching = 1
-let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v[\/](node_modules|storage|\.git)$',
-  \ }
-let g:ctrlp_lazy_update = 1
-let g:ctrlp_abbrev = {
-  \ 'gmode': 't',
-  \ 'abbrevs': [
-    \ {
-      \ 'pattern': '^cd js',
-      \ 'expanded': 'app/javascript',
-      \ 'mode': 'pfrz',
-    \ },
-    \ ]
-  \ }
-
 " COC config
 let g:coc_global_extensions = ['coc-solargraph', 'coc-webpack', 'coc-yaml', 'coc-html']
 
@@ -160,6 +140,8 @@ nmap <silent> <Leader>P :call CocAction('format')<cr>
 
 " replace word under cursor
 :nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+
+nmap <C-P> :Files<CR>
 
 " show documentation
 function! s:show_documentation()

@@ -92,3 +92,9 @@
 [submodule "vim/bundle/coc-react-refactor"]
 	path = vim/bundle/coc-react-refactor
 	url = https://github.com/fannheyward/coc-react-refactor.git
+[submodule "vim/bundle/fzf"]
+	path = vim/bundle/fzf
+	url = https://github.com/junegunn/fzf.git
+[submodule "vim/bundle/fzf.vim"]
+	path = vim/bundle/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
