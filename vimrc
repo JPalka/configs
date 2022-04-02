@@ -38,6 +38,26 @@ setglobal tags=./tags;
 " set omnifunc=rubycomplete#Complete
 set completeopt=menu,menuone,popup,noselect,noinsert
 
+" FastFold config
+
+nmap zuz <Plug>(FastFoldUpdate)
+let g:fastfold_savehook = 1
+let g:fastfold_fold_command_suffixes =  ['x','X','a','A','o','O','c','C']
+let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
+let g:markdown_folding = 1
+let g:rst_fold_enabled = 1
+let g:tex_fold_enabled = 1
+let g:vimsyn_folding = 'af'
+let g:xml_syntax_folding = 1
+let g:javaScript_fold = 1
+let g:sh_fold_enabled= 7
+let g:zsh_fold_enable = 1
+let g:ruby_fold = 1
+let g:perl_fold = 1
+let g:perl_fold_blocks = 1
+let g:r_syntax_folding = 1
+let g:rust_fold = 1
+
 " let g:molokai_original = 1
 let g:tmux_navigator_disable_when_zoomed = 1
 let g:indentLine_enabled = 0
@@ -122,7 +142,7 @@ let mapleader=" "
 nmap <silent> gw :s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR>`'
 nmap <Leader>t :NERDTreeToggle<CR>
 nmap <Leader>f :NERDTreeFind<CR>
-" nmap <Leader>f :setlocal foldmethod=syntax<CR>
+nmap <Leader>F :setlocal foldmethod=syntax<CR>
 nmap <Leader>i :IndentLinesToggle<CR>
 nmap <Leader>T :tab term<CR>
 
@@ -153,7 +173,7 @@ function! s:show_documentation()
 endfunction
 nnoremap <silent> <Leader>d :call <SID>show_documentation()<CR>
 
-" nmap <Leader>pt <Plug>(coc-format-selected)
+nmap <Leader>pt <Plug>(coc-format-selected)
 
 fun! TrimWhitespace()
   let l:save = winsaveview()
