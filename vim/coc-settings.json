@@ -5,5 +5,8 @@
   "solargraph.useBundler": true,
 
   "tsserver.disableAutomaticTypeAcquisition": false,
-  "snippets.userSnippetsDirectory": "~/.vim/UltiSnips/"
+  "snippets.userSnippetsDirectory": "~/.vim/UltiSnips/",
+  "snippets.extends": {
+    "ruby": ["rails", "rspec"],
+  }
 }
