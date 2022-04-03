@@ -135,6 +135,7 @@ nmap <Leader>T :tab term<CR>
 
 nmap <Leader>pp :Dispatch! bundle exec rake<CR>
 nmap <Leader>pr :tab Copen<CR>
+nmap <Leader>pt :.Rails<CR>
 nmap <Leader>ar :Dispatch! bundle exec rubocop -A %<CR>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -160,7 +161,7 @@ function! s:show_documentation()
 endfunction
 nnoremap <silent> <Leader>d :call <SID>show_documentation()<CR>
 
-nmap <Leader>pt <Plug>(coc-format-selected)
+" nmap <Leader>pt <Plug>(coc-format-selected)
 
 fun! TrimWhitespace()
   let l:save = winsaveview()
