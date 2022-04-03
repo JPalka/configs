@@ -101,3 +101,6 @@
 [submodule "vim/bundle/FastFold"]
 	path = vim/bundle/FastFold
 	url = https://github.com/Konfekt/FastFold.git
+[submodule "vim/bundle/vim-signify"]
+	path = vim/bundle/vim-signify
+	url = https://github.com/mhinz/vim-signify.git

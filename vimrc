@@ -105,6 +105,10 @@ let g:rg_binary = 'ag'
 " let g:UltiSnipsJumpForwardTrigger="<c-b>"
 " let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+" vim-signify config
+set updatetime=100
+let g:signify_sign_change = "~"
+
 " Use <C-l> for trigger snippet expand.
 imap <C-l> <Plug>(coc-snippets-expand)
 
