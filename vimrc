@@ -1,6 +1,35 @@
 set nocompatible
 
-execute pathogen#infect()
+call plug#begin()
+
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-rvm'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-rbenv'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'Yggdroot/indentLine'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-surround'
+Plug 'Lokaltog/vim-distinguished'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ervandew/supertab'
+Plug 'SirVer/ultisnips'
+Plug 'jremmen/vim-ripgrep'
+Plug 'sheerun/vim-polyglot'
+Plug 'fannheyward/coc-react-refactor'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'Konfekt/FastFold'
+Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-projectionist'
+
+call plug#end()
+
 filetype plugin indent on
 syntax on
 packloadall
