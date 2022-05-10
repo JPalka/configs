@@ -27,6 +27,13 @@ Plug 'junegunn/fzf.vim'
 Plug 'Konfekt/FastFold'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-projectionist'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'nanotech/jellybeans.vim'
+Plug 'tpope/vim-abolish'
+Plug 'FooSoft/vim-argwrap'
+Plug 'rhysd/clever-f.vim'
+Plug 'tommcdo/vim-exchange'
+Plug 'AndrewRadev/splitjoin.vim'
 
 call plug#end()
 
@@ -182,6 +189,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gh <Plug>(coc-references)
 xmap <leader>a <Plug>(coc-codeaction-selected)
 nmap <leader>a <Plug>(coc-codeaction-selected)
+nmap <leader>jj :ArgWrap<CR>
 
 nmap <silent> <Leader>P :call CocAction('format')<cr>
 
