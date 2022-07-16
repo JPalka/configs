@@ -210,7 +210,7 @@ function! s:show_documentation()
 endfunction
 nnoremap <silent> <Leader>d :call <SID>show_documentation()<CR>
 
-" nmap <Leader>pt <Plug>(coc-format-selected)
+nmap <Leader>pt <Plug>(coc-format-selected)
 
 fun! TrimWhitespace()
   let l:save = winsaveview()
