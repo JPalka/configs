@@ -81,7 +81,6 @@ let g:fastfold_savehook = 1
 let g:fastfold_fold_command_suffixes =  ['x','X','a','A','o','O','c','C']
 let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
 
-" let g:molokai_original = 1
 let g:tmux_navigator_disable_when_zoomed = 1
 let g:indentLine_enabled = 0
 let g:rails_projections = {
@@ -190,6 +189,9 @@ nmap <silent> gh <Plug>(coc-references)
 xmap <leader>a <Plug>(coc-codeaction-selected)
 nmap <leader>a <Plug>(coc-codeaction-selected)
 nmap <leader>jj :ArgWrap<CR>
+nmap <leader>r :.Rails<CR>
+nmap <leader>R :Rails<CR>
+nmap <leader>gl :Git log<CR>
 
 nmap <silent> <Leader>P :call CocAction('format')<cr>
 
