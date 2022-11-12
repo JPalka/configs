@@ -1,5 +1,6 @@
 set nocompatible
 
+" Plugin definitions {{{
 call plug#begin()
 
 Plug 'preservim/nerdtree'
@@ -36,12 +37,14 @@ Plug 'tommcdo/vim-exchange'
 Plug 'AndrewRadev/splitjoin.vim'
 
 call plug#end()
+" }}}
 
 filetype plugin indent on
 syntax on
 packloadall
 silent! helptags ALL
 
+" General settings {{{
 " Required for operations modifying multiple buffers like rename.
 set hidden
 set shell=zsh
@@ -65,24 +68,40 @@ set backspace=indent,eol,start
 set ruler
 set showtabline=2
 set laststatus=2
+set shiftround
+set showmatch
+set completeopt=menu,menuone,popup,noselect,noinsert
 setglobal tags=./tags;
+color distinguished
+hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
+
+" status line {{{
+set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P
+" }}}
 
 " let g:rubycomplete_buffer_loading = 1
 " let g:rubycomplete_classes_in_global = 1
 " let g:rubycomplete_rails = 1
 " let g:rubycomplete_use_bundler = 1
 " set omnifunc=rubycomplete#Complete
-set completeopt=menu,menuone,popup,noselect,noinsert
 
-" FastFold config
+" FastFold config {{{
+nnoremap zuz <Plug>(FastFoldUpdate)
 
-nmap zuz <Plug>(FastFoldUpdate)
 let g:fastfold_savehook = 1
 let g:fastfold_fold_command_suffixes =  ['x','X','a','A','o','O','c','C']
 let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
 
-let g:tmux_navigator_disable_when_zoomed = 1
+" }}}
+
+" IndentLine config {{{
+
 let g:indentLine_enabled = 0
+
+" }}}
+
+" projections {{{
+
 let g:rails_projections = {
       \  "app/controllers/*_controller.rb": {
       \      "test": [
@@ -126,35 +145,47 @@ let g:rails_projections = {
       \   },
       \ }
 
-set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P
+" }}}
 
-color distinguished
-hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
-
-" COC config
+" COC config {{{
 let g:coc_global_extensions = ['coc-solargraph', 'coc-webpack', 'coc-yaml', 'coc-html']
+" }}}
 
-" Supertab config
+" Supertab config {{{
 let g:SuperTabMappingForward = '<s-tab>'
 let g:SuperTabMappingBackward = '<tab>'
+" }}}
 
-" Ripgrep config
+" Ripgrep config {{{
 let g:rg_binary = 'ag'
+" }}}
 
-" " Ultisnips config
+" Ultisnips config {{{
 " let g:UltiSnipsExpandTrigger="<c-l>"
 " let g:UltiSnipsJumpForwardTrigger="<c-b>"
 " let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" }}}
 
-" vim-signify config
+" vim-signify config {{{
 set updatetime=100
 let g:signify_sign_change = "~"
+" }}}
+
+" }}}
+
+let g:tmux_navigator_disable_when_zoomed = 1
+
+" Key mappings {{{
+
+" IMPORTANT! DONT USE esc for exiting insert mode
+inoremap jk <esc>
+inoremap <esc> <nop>
 
 " Use <C-l> for trigger snippet expand.
 imap <C-l> <Plug>(coc-snippets-expand)
 
 " Use <C-j> for select text for visual placeholder of snippet.
-vmap <C-j> <Plug>(coc-snippets-select)
+vnoremap <C-j> <Plug>(coc-snippets-select)
 
 " Use <C-j> for jump to next placeholder, it's default of coc.nvim
 let g:coc_snippet_next = '<c-j>'
@@ -163,42 +194,45 @@ let g:coc_snippet_next = '<c-j>'
 let g:coc_snippet_prev = '<c-k>'
 
 " Use <C-j> for both expand and jump (make expand higher priority.)
-imap <C-j> <Plug>(coc-snippets-expand-jump)
+inoremap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " Use <leader>x for convert visual selected code to snippet
-xmap <leader>x  <Plug>(coc-convert-snippet)
+xnoremap <leader>x  <Plug>(coc-convert-snippet)
 
 " KEY MAPPINGS
 let mapleader=" "
+let maplocalleader = "\\"
 
-nmap <silent> gw :s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR>`'
-nmap <Leader>t :NERDTreeToggle<CR>
-nmap <Leader>f :NERDTreeFind<CR>
-nmap <Leader>F :setlocal foldmethod=syntax<CR>
-nmap <Leader>i :IndentLinesToggle<CR>
-nmap <Leader>T :tab term<CR>
+" nnoremap <silent> gw :s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR>`'
+nnoremap <Leader>t :NERDTreeToggle<CR>
+nnoremap <Leader>f :NERDTreeFind<CR>
+nnoremap <Leader>F :setlocal foldmethod=syntax<CR>
+nnoremap <Leader>i :IndentLinesToggle<CR>
+nnoremap <Leader>T :tab term<CR>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
-nmap <Leader>pp :Dispatch! bundle exec rake<CR>
-nmap <Leader>pr :tab Copen<CR>
-nmap <Leader>pt :.Rails<CR>
-nmap <Leader>ar :Dispatch! bundle exec rubocop -A %<CR>
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gh <Plug>(coc-references)
-xmap <leader>a <Plug>(coc-codeaction-selected)
-nmap <leader>a <Plug>(coc-codeaction-selected)
-nmap <leader>jj :ArgWrap<CR>
-nmap <leader>r :.Rails<CR>
-nmap <leader>R :Rails<CR>
-nmap <leader>gl :Git log<CR>
+nnoremap <Leader>pp :Dispatch! bundle exec rake<CR>
+nnoremap <Leader>pr :tab Copen<CR>
+nnoremap <Leader>pt :.Rails<CR>
+nnoremap <Leader>ar :Dispatch! bundle exec rubocop -A %<CR>
+nnoremap <silent> gd <Plug>(coc-definition)
+nnoremap <silent> gy <Plug>(coc-type-definition)
+nnoremap <silent> gi <Plug>(coc-implementation)
+nnoremap <silent> gh <Plug>(coc-references)
+xnoremap <leader>a <Plug>(coc-codeaction-selected)
+nnoremap <leader>a <Plug>(coc-codeaction-selected)
+nnoremap <leader>jj :ArgWrap<CR>
+nnoremap <leader>r :.Rails<CR>
+nnoremap <leader>R :Rails<CR>
+nnoremap <leader>gl :Git log<CR>
 
-nmap <silent> <Leader>P :call CocAction('format')<cr>
+nnoremap <silent> <Leader>P :call CocAction('format')<cr>
 
 " replace word under cursor
-:nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 
-nmap <C-P> :Files<CR>
+nnoremap <C-P> :Files<CR>
 
 " show documentation
 function! s:show_documentation()
@@ -210,8 +244,11 @@ function! s:show_documentation()
 endfunction
 nnoremap <silent> <Leader>d :call <SID>show_documentation()<CR>
 
-nmap <Leader>pt <Plug>(coc-format-selected)
+nnoremap <Leader>pt <Plug>(coc-format-selected)
 
+" }}}
+
+" autocommands and functions {{{
 fun! TrimWhitespace()
   let l:save = winsaveview()
   keeppatterns %s/\s\+$//e
@@ -223,4 +260,39 @@ augroup JJ
   autocmd BufWritePre * :call TrimWhitespace()
 augroup END
 
+" vim
+augroup filetype_vim
+      autocmd!
+      autocmd FileType vim setlocal foldmethod=marker
+augroup END
+
 command -nargs=* Dbundle Dispatch dbundle <args>
+
+" }}}
+
+" VIM TUTORIAL STUFF {{{
+
+" TODO: Add abbrevations? although they seem like a footgun
+
+" remove these probably
+vnoremap <leader>" <esc>`<i'<esc>`>la'<esc>
+
+" do usuniecia
+" augroup filetype_html
+"       autocmd!
+"       autocmd FileType html nnoremap <buffer> <localleader>f Vatzf
+" augroup END
+
+" in-header motion for markdown files
+" augroup filetype_md
+"       autocmd!
+"       autocmd FileType markdown onoremap ih :<c-u>execute "normal! ?\\(^--\\+$\\\\|^==\\+$\\)\rkvg_"<cr>
+" augroup END
+" onoremap ih :<c-u>execute "normal! ?\\(^--\\+$\\\\|^==\\+$\\)\rkvg_"<cr>
+
+" do wywalenia
+" augroup test
+"       autocmd!
+"       autocmd FileType ruby setlocal statusline=kurwa\ ruby\ file
+" augroup END
+" }}}

@@ -1,4 +1,4 @@
-#include "/etc/regolith/styles/ayu-dark/root"
+#include "/etc/regolith/styles/ayu-mirage/root"
 
 i3-wm.bar.trayoutput: primary
 i3xrocks.date.format2: "%a %d/%m %T"
