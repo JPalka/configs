@@ -16,7 +16,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-surround'
-Plug 'Lokaltog/vim-distinguished'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips'
@@ -29,12 +28,15 @@ Plug 'Konfekt/FastFold'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-projectionist'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'nanotech/jellybeans.vim'
 Plug 'tpope/vim-abolish'
 Plug 'FooSoft/vim-argwrap'
 Plug 'rhysd/clever-f.vim'
-Plug 'tommcdo/vim-exchange'
+Plug 'tommcdo/vim-exchange' " probably not really needed. consider removing
 Plug 'AndrewRadev/splitjoin.vim'
+
+" colorschemes
+Plug 'nanotech/jellybeans.vim'
+Plug 'Lokaltog/vim-distinguished'
 
 call plug#end()
 " }}}
@@ -54,14 +56,14 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-set smartindent
+set smartindent " reconsider this option
+set number
 set relativenumber
 set noerrorbells
 set incsearch
 set scrolloff=8
 set cmdheight=2
-set updatetime=50
-set number
+set updatetime=4000
 set term=xterm-256color
 set directory=~/.vim_backup//
 set backspace=indent,eol,start
@@ -70,9 +72,9 @@ set showtabline=2
 set laststatus=2
 set shiftround
 set showmatch
-set completeopt=menu,menuone,popup,noselect,noinsert
+set completeopt=menu,menuone,preview,noselect,noinsert " prevew/popup options seem to be the same
 setglobal tags=./tags;
-color distinguished
+color jellybeans
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
 " status line {{{
@@ -171,9 +173,11 @@ set updatetime=100
 let g:signify_sign_change = "~"
 " }}}
 
+" tmux navigator config {{{
+let g:tmux_navigator_disable_when_zoomed = 1
 " }}}
 
-let g:tmux_navigator_disable_when_zoomed = 1
+" }}}
 
 " Key mappings {{{
 
@@ -185,7 +189,7 @@ inoremap <esc> <nop>
 imap <C-l> <Plug>(coc-snippets-expand)
 
 " Use <C-j> for select text for visual placeholder of snippet.
-vnoremap <C-j> <Plug>(coc-snippets-select)
+vmap <C-j> <Plug>(coc-snippets-select)
 
 " Use <C-j> for jump to next placeholder, it's default of coc.nvim
 let g:coc_snippet_next = '<c-j>'
@@ -194,10 +198,10 @@ let g:coc_snippet_next = '<c-j>'
 let g:coc_snippet_prev = '<c-k>'
 
 " Use <C-j> for both expand and jump (make expand higher priority.)
-inoremap <C-j> <Plug>(coc-snippets-expand-jump)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " Use <leader>x for convert visual selected code to snippet
-xnoremap <leader>x  <Plug>(coc-convert-snippet)
+xmap <leader>x  <Plug>(coc-convert-snippet)
 
 " KEY MAPPINGS
 let mapleader=" "
@@ -249,6 +253,7 @@ nnoremap <Leader>pt <Plug>(coc-format-selected)
 " }}}
 
 " autocommands and functions {{{
+
 fun! TrimWhitespace()
   let l:save = winsaveview()
   keeppatterns %s/\s\+$//e
@@ -266,6 +271,7 @@ augroup filetype_vim
       autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
+" just keep it to showcase command definition example. no longer used.
 command -nargs=* Dbundle Dispatch dbundle <args>
 
 " }}}
@@ -275,7 +281,7 @@ command -nargs=* Dbundle Dispatch dbundle <args>
 " TODO: Add abbrevations? although they seem like a footgun
 
 " remove these probably
-vnoremap <leader>" <esc>`<i'<esc>`>la'<esc>
+" vnoremap <leader>" <esc>`<i'<esc>`>la'<esc>
 
 " do usuniecia
 " augroup filetype_html
