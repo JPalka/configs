@@ -74,7 +74,7 @@ set shiftround
 set showmatch
 set completeopt=menu,menuone,preview,noselect,noinsert " prevew/popup options seem to be the same
 setglobal tags=./tags;
-color jellybeans
+color distinguished
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
 " status line {{{
