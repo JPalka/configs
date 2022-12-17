@@ -127,7 +127,7 @@ source $HOME/zsh_alias.sh
 export PATH="/home/jpalka/.local/bin:$PATH"
 
 # source file containing env variables used by various scripts
-source $HOME/.env.sh
+# source $HOME/.env.sh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
