@@ -36,6 +36,9 @@ path = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 ~/.fonts:
 	ln -fsb $(path)fonts ~/.fonts
 
+~/.config/rofi:
+	ln -fsb $(path)rofi ~/.config/rofi
+
 git: ~/.gitconfig ~/.gitignore
 vim: ~/.vim ~/.vim_backup
 vimrc: ~/.vimrc
@@ -43,6 +46,7 @@ zshrc: ~/.zshrc
 diff: ~/diff-so-fancy
 tmux: ~/.tmux.conf
 fonts: ~/.fonts
+rofi: ~/.config/rofi
 .PHONY: i3
 i3:
 	ln -fsb $(path)/i3/config ~/.config/i3/config

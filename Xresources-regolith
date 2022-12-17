@@ -4,3 +4,5 @@ i3-wm.bar.trayoutput: primary
 i3xrocks.date.format2: "%a %d/%m %T"
 i3xrocks.time.interval: 1
 i3-wm.program.notifications: "/usr/bin/dunst"
+
+rofi.theme: ~/.config/rofi/rofi
