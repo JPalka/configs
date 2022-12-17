@@ -3,10 +3,4 @@
   "solargraph.autoformat": true,
   "solargraph.formatting": true,
   "solargraph.useBundler": true,
-
-  "tsserver.disableAutomaticTypeAcquisition": false,
-  "snippets.userSnippetsDirectory": "~/.vim/UltiSnips/",
-  "snippets.extends": {
-    "ruby": ["rails", "rspec"],
-  }
 }

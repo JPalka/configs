@@ -150,7 +150,7 @@ let g:rails_projections = {
 " }}}
 
 " COC config {{{
-let g:coc_global_extensions = ['coc-solargraph', 'coc-webpack', 'coc-yaml', 'coc-html']
+let g:coc_global_extensions = ['coc-solargraph', 'coc-webpack', 'coc-yaml', 'coc-html', 'coc-prettier']
 " }}}
 
 " Supertab config {{{
@@ -301,4 +301,6 @@ command -nargs=* Dbundle Dispatch dbundle <args>
 "       autocmd!
 "       autocmd FileType ruby setlocal statusline=kurwa\ ruby\ file
 " augroup END
+
+nnoremap <leader>pb :execute "rightbelow vsplit " . bufname("#")<cr>
 " }}}

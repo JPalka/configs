@@ -40,10 +40,13 @@ git: ~/.gitconfig ~/.gitignore
 vim: ~/.vim ~/.vim_backup
 vimrc: ~/.vimrc
 zshrc: ~/.zshrc
-ohmyzsh: ~/.oh-my-zsh
 diff: ~/diff-so-fancy
 tmux: ~/.tmux.conf
 fonts: ~/.fonts
+.PHONY: i3
+i3:
+	ln -fsb $(path)/i3/config ~/.config/i3/config
+
 .PHONY: regolith
 regolith:
 	ln -fsb $(path)Xresources-regolith ~/.Xresources-regolith
@@ -51,4 +54,4 @@ regolith:
 	ln -fsb $(path)timewarrior ~/
 	ln -fsb $(path)scripts ~/
 
-all: git vim vimrc zshrc ohmyzsh diff tmux fonts
+all: git vim vimrc zshrc diff tmux fonts

@@ -8,7 +8,7 @@ export TERM=xterm-256color
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="Predawn"
+ZSH_THEME="macovsky-ruby"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -127,7 +127,7 @@ source $HOME/zsh_alias.sh
 export PATH="/home/jpalka/.local/bin:$PATH"
 
 # source file containing env variables used by various scripts
-source $HOME/.env.sh
+# source $HOME/.env.sh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
