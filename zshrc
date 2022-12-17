@@ -117,8 +117,6 @@ function ruby_version()
     fi
 }
 
-PROMPT='[$(ruby_version)][%{$fg[blue]%}%d%{$reset_color%}$(git_status)%{$reset_color%}] %F{yellow}'
-
 preexec () { echo -ne "\e[0m" }
 
 source $HOME/zsh_alias.sh
