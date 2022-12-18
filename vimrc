@@ -17,8 +17,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'ervandew/supertab'
-Plug 'SirVer/ultisnips'
 Plug 'jremmen/vim-ripgrep'
 Plug 'sheerun/vim-polyglot'
 Plug 'fannheyward/coc-react-refactor'
@@ -163,9 +161,9 @@ let g:rg_binary = 'ag'
 " }}}
 
 " Ultisnips config {{{
-" let g:UltiSnipsExpandTrigger="<c-l>"
-" let g:UltiSnipsJumpForwardTrigger="<c-b>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsExpandTrigger="<c-l>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " }}}
 
 " vim-signify config {{{
