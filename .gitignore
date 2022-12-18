@@ -3,4 +3,4 @@ vim_backup/*
 oh-my-zsh/cache/
 ctags-5.8/
 vim-8.2.2874/
-vim/plugged/*
+vim/plugged/**

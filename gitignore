@@ -9,3 +9,4 @@ oh-my-zsh/cache
 timewarrior/data/**
 solargraph_rails.rb
 solargraph.yml
+vim/plugged/**
