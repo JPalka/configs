@@ -678,3 +678,6 @@ bindsym $mod+p move workspace to output right
 set_from_resource $i3-wm.binding.calculator i3-wm.binding.calculator XF86Calculator
 set_from_resource $i3-wm.program.calculator i3-wm.program.calculator /usr/bin/i3-msg -q exec "/usr/bin/gnome-terminal --class=floating_window -x" calc
 bindsym $i3-wm.binding.calculator exec $i3-wm.program.calculator
+
+# hack so firefox actually has a border. needed to clearly see if its focused or not
+for_window [class="firefox"] border pixel 1

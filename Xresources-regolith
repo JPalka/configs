@@ -1,8 +1,9 @@
 #include "/etc/regolith/styles/ayu-mirage/root"
 
 i3-wm.bar.trayoutput: primary
+i3-wm.program.notifications: "/usr/bin/dunst"
+
 i3xrocks.date.format2: "%a %d/%m %T"
 i3xrocks.time.interval: 1
-i3-wm.program.notifications: "/usr/bin/dunst"
 
 rofi.theme: ~/.config/rofi/rofi
