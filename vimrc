@@ -207,7 +207,7 @@ nnoremap <Leader>F :setlocal foldmethod=syntax<CR>
 nnoremap <Leader>i :IndentLinesToggle<CR>
 nnoremap <Leader>T :tab term<CR>
 nnoremap <Leader>ce :vsplit $MYVIMRC<cr>
-nnoremap <Leader>cv :source $MYVIMRC<cr>
+nnoremap <Leader>cr :source $MYVIMRC<cr>
 
 nnoremap <Leader>pp :Dispatch! bundle exec rake<CR>
 nnoremap <Leader>pr :tab Copen<CR>
@@ -222,8 +222,11 @@ nnoremap <silent> gh <Plug>(coc-references)
 xnoremap <leader>a <Plug>(coc-codeaction-selected)
 nnoremap <leader>a <Plug>(coc-codeaction-selected)
 nnoremap <leader>jj :ArgWrap<CR>
-nnoremap <leader>r :.Rails<CR>
+
+" rails specific bindings
+nnoremap <leader>rr :.Rails<CR>
 nnoremap <leader>R :Rails<CR>
+nnoremap <Leader>rc :Rails log:clear <bar> Rails tmp:clear <bar> Rails assets:clean<CR>
 
 nnoremap <leader>gl :Git log<CR>
 nnoremap <leader>gp :Git pull<CR>
