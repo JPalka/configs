@@ -213,16 +213,20 @@ nnoremap <Leader>pp :Dispatch! bundle exec rake<CR>
 nnoremap <Leader>pr :tab Copen<CR>
 nnoremap <Leader>pt :.Rails<CR>
 nnoremap <Leader>ar :Dispatch! bundle exec rubocop -A %<CR>
+
 nnoremap <silent> gd <Plug>(coc-definition)
 nnoremap <silent> gy <Plug>(coc-type-definition)
 nnoremap <silent> gi <Plug>(coc-implementation)
 nnoremap <silent> gh <Plug>(coc-references)
+
 xnoremap <leader>a <Plug>(coc-codeaction-selected)
 nnoremap <leader>a <Plug>(coc-codeaction-selected)
 nnoremap <leader>jj :ArgWrap<CR>
 nnoremap <leader>r :.Rails<CR>
 nnoremap <leader>R :Rails<CR>
+
 nnoremap <leader>gl :Git log<CR>
+nnoremap <leader>gp :Git pull<CR>
 
 nnoremap <silent> <Leader>P :call CocAction('format')<cr>
 
