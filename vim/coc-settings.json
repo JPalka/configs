@@ -3,4 +3,10 @@
   "solargraph.autoformat": true,
   "solargraph.formatting": true,
   "solargraph.useBundler": true,
+
+  "snippets.ultisnips.directories": ["~/.vim/ultisnips"],
+  "snippets.loadVSCodeProjectSnippets": false,
+  "snippets.extends": {
+    "ruby": ["rails"]
+  }
 }

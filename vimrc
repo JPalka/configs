@@ -148,7 +148,7 @@ let g:rails_projections = {
 " }}}
 
 " COC config {{{
-let g:coc_global_extensions = ['coc-solargraph', 'coc-webpack', 'coc-yaml', 'coc-html', 'coc-prettier', 'coc-tsserver']
+let g:coc_global_extensions = ['coc-solargraph', 'coc-webpack', 'coc-yaml', 'coc-html', 'coc-prettier', 'coc-tsserver', 'coc-snippets']
 " }}}
 
 " Supertab config {{{
@@ -158,12 +158,6 @@ let g:SuperTabMappingBackward = '<tab>'
 
 " Ripgrep config {{{
 let g:rg_binary = 'ag'
-" }}}
-
-" Ultisnips config {{{
-let g:UltiSnipsExpandTrigger="<c-l>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " }}}
 
 " vim-signify config {{{
@@ -190,16 +184,17 @@ imap <C-l> <Plug>(coc-snippets-expand)
 vmap <C-j> <Plug>(coc-snippets-select)
 
 " Use <C-j> for jump to next placeholder, it's default of coc.nvim
-let g:coc_snippet_next = '<c-j>'
+" let g:coc_snippet_next = '<c-j>'
+let g:coc_snippet_next = '<tab>'
 
 " Use <C-k> for jump to previous placeholder, it's default of coc.nvim
-let g:coc_snippet_prev = '<c-k>'
+let g:coc_snippet_prev = '<s-tab>'
 
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " Use <leader>x for convert visual selected code to snippet
-xmap <leader>x  <Plug>(coc-convert-snippet)
+xmap <Leader>x  <Plug>(coc-convert-snippet)
 
 " KEY MAPPINGS
 let mapleader=" "
@@ -211,8 +206,8 @@ nnoremap <Leader>f :NERDTreeFind<CR>
 nnoremap <Leader>F :setlocal foldmethod=syntax<CR>
 nnoremap <Leader>i :IndentLinesToggle<CR>
 nnoremap <Leader>T :tab term<CR>
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <Leader>ce vsplit $MYVIMRC<cr>
+nnoremap <Leader>cv :source $MYVIMRC<cr>
 
 nnoremap <Leader>pp :Dispatch! bundle exec rake<CR>
 nnoremap <Leader>pr :tab Copen<CR>
