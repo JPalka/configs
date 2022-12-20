@@ -206,7 +206,7 @@ nnoremap <Leader>f :NERDTreeFind<CR>
 nnoremap <Leader>F :setlocal foldmethod=syntax<CR>
 nnoremap <Leader>i :IndentLinesToggle<CR>
 nnoremap <Leader>T :tab term<CR>
-nnoremap <Leader>ce vsplit $MYVIMRC<cr>
+nnoremap <Leader>ce :vsplit $MYVIMRC<cr>
 nnoremap <Leader>cv :source $MYVIMRC<cr>
 
 nnoremap <Leader>pp :Dispatch! bundle exec rake<CR>
@@ -265,6 +265,13 @@ augroup END
 augroup filetype_vim
       autocmd!
       autocmd FileType vim setlocal foldmethod=marker
+augroup END
+
+" ruby and rails
+augroup filetype_ruby_rails
+      autocmd!
+      autocmd BufReadPost,BufNewFile *_spec.rb set filetype=rspec
+      autocmd User Rails set ft=rails.ruby
 augroup END
 
 " just keep it to showcase command definition example. no longer used.
