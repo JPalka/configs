@@ -169,6 +169,10 @@ let g:signify_sign_change = "~"
 let g:tmux_navigator_disable_when_zoomed = 1
 " }}}
 
+" FZF config {{{
+let $FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .git \) -prune -o -print'
+" }}}
+
 " }}}
 
 " Key mappings {{{
