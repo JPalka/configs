@@ -145,6 +145,23 @@ let g:rails_projections = {
       \      "template": "# frozen_string_literal: true\n\n" . "require 'rails_helper'\n\n" .
       \        "RSpec.describe '{camelcase|capitalize|colons}' do\nend",
       \   },
+      \  "app/queries/*_query.rb": {
+      \      "test": [
+      \        "spec/queries/{}_query_spec.rb",
+      \      ],
+      \      "alternate": [
+      \        "spec/queries/{}_query_spec.rb",
+      \      ],
+      \      "related": [
+      \        "app/models/{dirname|singular}.rb",
+      \      ],
+      \   },
+      \   "spec/queries/*_spec.rb": {
+      \      "command": "query",
+      \      "alternate": "app/queries/{}_query.rb",
+      \      "template": "# frozen_string_literal: true\n\n" . "require 'rails_helper'\n\n" .
+      \        "RSpec.describe {camelcase|capitalize|colons} do\nend",
+      \   },
       \ }
 
 " }}}

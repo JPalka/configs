@@ -8,7 +8,7 @@
   "snippets.loadVSCodeProjectSnippets": false,
   "snippets.extends": {
     "rails": ["ruby"],
-    "rspec": ["ruby"]
+    "ruby": ["rspec"]
   },
 
   "css.completion.triggerPropertyValueCompletion": false,
