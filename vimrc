@@ -71,6 +71,7 @@ set laststatus=2
 set shiftround
 set showmatch
 set completeopt=menu,menuone,preview,noselect,noinsert " prevew/popup options seem to be the same
+set confirm
 setglobal tags=./tags;
 color distinguished
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
@@ -122,26 +123,26 @@ let g:rails_projections = {
       \   "spec/requests/*_request_spec.rb": {
       \      "command": "request",
       \      "alternate": "app/controllers/{}_controller.rb",
-      \      "template": "require 'rails_helper'\n\n" .
-      \        "RSpec.describe '{}' do\nend",
+      \      "template": "# frozen_string_literal: true\n\n" . "require 'rails_helper'\n\n" .
+      \        "RSpec.describe '{camelcase|capitalize|colons}' do\nend",
       \   },
       \   "spec/features/*_spec.rb": {
       \      "command": "feature",
       \      "alternate": "app/controllers/{}_controller.rb",
-      \      "template": "require 'rails_helper'\n\n" .
-      \        "RSpec.feature '{}' do\nend",
+      \      "template": "# frozen_string_literal: true\n\n" . "require 'rails_helper'\n\n" .
+      \        "RSpec.feature '{camelcase|capitalize|colons}' do\nend",
       \   },
       \   "spec/system/*_spec.rb": {
       \      "command": "system",
       \      "alternate": "app/controllers/{}_controller.rb",
-      \      "template": "require 'rails_helper'\n\n" .
-      \        "RSpec.describe '{}' do\nend",
+      \      "template": "# frozen_string_literal: true\n\n" . "require 'rails_helper'\n\n" .
+      \        "RSpec.describe '{camelcase|capitalize|colons}' do\nend",
       \   },
       \   "spec/controllers/*_spec.rb": {
       \      "command": "controller",
       \      "alternate": "app/controllers/{}_controller.rb",
-      \      "template": "require 'rails_helper'\n\n" .
-      \        "RSpec.describe '{}' do\nend",
+      \      "template": "# frozen_string_literal: true\n\n" . "require 'rails_helper'\n\n" .
+      \        "RSpec.describe '{camelcase|capitalize|colons}' do\nend",
       \   },
       \ }
 
@@ -275,11 +276,11 @@ augroup filetype_vim
 augroup END
 
 " ruby and rails
-augroup filetype_ruby_rails
-      autocmd!
-      autocmd BufReadPost,BufNewFile *_spec.rb set filetype=rspec
-      autocmd User Rails set ft=rails.ruby
-augroup END
+" augroup filetype_ruby_rails
+"       autocmd!
+"       autocmd BufReadPost,BufNewFile *_spec.rb set filetype=rspec
+"       autocmd User Rails set ft=rails.ruby
+" augroup END
 
 " just keep it to showcase command definition example. no longer used.
 command -nargs=* Dbundle Dispatch dbundle <args>
