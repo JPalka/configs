@@ -31,6 +31,7 @@ Plug 'FooSoft/vim-argwrap'
 Plug 'rhysd/clever-f.vim'
 Plug 'tommcdo/vim-exchange' " probably not really needed. consider removing
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'psliwka/vim-smoothie'
 
 " colorschemes
 Plug 'nanotech/jellybeans.vim'
