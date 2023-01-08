@@ -9,5 +9,10 @@
   "snippets.extends": {
     "rails": ["ruby"],
     "rspec": ["ruby"]
-  }
+  },
+
+  "css.completion.triggerPropertyValueCompletion": false,
+  "css.completion.completePropertyWithSemicolon": false,
+  "css.lint.unknownAtRules": "ignore",
+  "css.lint.zeroUnits": "error",
 }

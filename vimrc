@@ -149,7 +149,10 @@ let g:rails_projections = {
 " }}}
 
 " COC config {{{
-let g:coc_global_extensions = ['coc-solargraph', 'coc-webpack', 'coc-yaml', 'coc-html', 'coc-prettier', 'coc-tsserver', 'coc-snippets']
+let g:coc_global_extensions = ['coc-solargraph', 'coc-webpack', 'coc-yaml', 'coc-html', 'coc-prettier', 'coc-tsserver', 'coc-snippets', 'coc-css']
+
+" needed for coc-css
+autocmd FileType css setl iskeyword+=-
 " }}}
 
 " Supertab config {{{
@@ -249,6 +252,8 @@ function! s:show_documentation()
 endfunction
 nnoremap <silent> <Leader>d :call <SID>show_documentation()<CR>
 
+" somethings fucky with that. some completions(eg css or json) do not allow me
+" to scroll completion list with tab
 inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
 inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
