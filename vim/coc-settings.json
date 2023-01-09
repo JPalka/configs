@@ -8,6 +8,11 @@
   "snippets.loadVSCodeProjectSnippets": false,
   "snippets.extends": {
     "rails": ["ruby"],
-    "rspec": ["ruby"]
-  }
+    "ruby": ["rspec"]
+  },
+
+  "css.completion.triggerPropertyValueCompletion": false,
+  "css.completion.completePropertyWithSemicolon": false,
+  "css.lint.unknownAtRules": "ignore",
+  "css.lint.zeroUnits": "error",
 }

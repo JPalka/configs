@@ -31,6 +31,7 @@ Plug 'FooSoft/vim-argwrap'
 Plug 'rhysd/clever-f.vim'
 Plug 'tommcdo/vim-exchange' " probably not really needed. consider removing
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'psliwka/vim-smoothie'
 
 " colorschemes
 Plug 'nanotech/jellybeans.vim'
@@ -71,6 +72,7 @@ set laststatus=2
 set shiftround
 set showmatch
 set completeopt=menu,menuone,preview,noselect,noinsert " prevew/popup options seem to be the same
+set confirm
 setglobal tags=./tags;
 color distinguished
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
@@ -122,33 +124,53 @@ let g:rails_projections = {
       \   "spec/requests/*_request_spec.rb": {
       \      "command": "request",
       \      "alternate": "app/controllers/{}_controller.rb",
-      \      "template": "require 'rails_helper'\n\n" .
-      \        "RSpec.describe '{}' do\nend",
+      \      "template": "# frozen_string_literal: true\n\n" . "require 'rails_helper'\n\n" .
+      \        "RSpec.describe '{camelcase|capitalize|colons}' do\nend",
       \   },
       \   "spec/features/*_spec.rb": {
       \      "command": "feature",
       \      "alternate": "app/controllers/{}_controller.rb",
-      \      "template": "require 'rails_helper'\n\n" .
-      \        "RSpec.feature '{}' do\nend",
+      \      "template": "# frozen_string_literal: true\n\n" . "require 'rails_helper'\n\n" .
+      \        "RSpec.feature '{camelcase|capitalize|colons}' do\nend",
       \   },
       \   "spec/system/*_spec.rb": {
       \      "command": "system",
       \      "alternate": "app/controllers/{}_controller.rb",
-      \      "template": "require 'rails_helper'\n\n" .
-      \        "RSpec.describe '{}' do\nend",
+      \      "template": "# frozen_string_literal: true\n\n" . "require 'rails_helper'\n\n" .
+      \        "RSpec.describe '{camelcase|capitalize|colons}' do\nend",
       \   },
       \   "spec/controllers/*_spec.rb": {
       \      "command": "controller",
       \      "alternate": "app/controllers/{}_controller.rb",
-      \      "template": "require 'rails_helper'\n\n" .
-      \        "RSpec.describe '{}' do\nend",
+      \      "template": "# frozen_string_literal: true\n\n" . "require 'rails_helper'\n\n" .
+      \        "RSpec.describe '{camelcase|capitalize|colons}' do\nend",
+      \   },
+      \  "app/queries/*_query.rb": {
+      \      "test": [
+      \        "spec/queries/{}_query_spec.rb",
+      \      ],
+      \      "alternate": [
+      \        "spec/queries/{}_query_spec.rb",
+      \      ],
+      \      "related": [
+      \        "app/models/{dirname|singular}.rb",
+      \      ],
+      \   },
+      \   "spec/queries/*_spec.rb": {
+      \      "command": "query",
+      \      "alternate": "app/queries/{}_query.rb",
+      \      "template": "# frozen_string_literal: true\n\n" . "require 'rails_helper'\n\n" .
+      \        "RSpec.describe {camelcase|capitalize|colons} do\nend",
       \   },
       \ }
 
 " }}}
 
 " COC config {{{
-let g:coc_global_extensions = ['coc-solargraph', 'coc-webpack', 'coc-yaml', 'coc-html', 'coc-prettier', 'coc-tsserver', 'coc-snippets']
+let g:coc_global_extensions = ['coc-solargraph', 'coc-webpack', 'coc-yaml', 'coc-html', 'coc-prettier', 'coc-tsserver', 'coc-snippets', 'coc-css']
+
+" needed for coc-css
+autocmd FileType css setl iskeyword+=-
 " }}}
 
 " Supertab config {{{
@@ -252,6 +274,8 @@ function! s:show_documentation()
 endfunction
 nnoremap <silent> <Leader>d :call <SID>show_documentation()<CR>
 
+" somethings fucky with that. some completions(eg css or json) do not allow me
+" to scroll completion list with tab
 inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
 inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
@@ -279,11 +303,11 @@ augroup filetype_vim
 augroup END
 
 " ruby and rails
-augroup filetype_ruby_rails
-      autocmd!
-      autocmd BufReadPost,BufNewFile *_spec.rb set filetype=rspec
-      autocmd User Rails set ft=rails.ruby
-augroup END
+" augroup filetype_ruby_rails
+"       autocmd!
+"       autocmd BufReadPost,BufNewFile *_spec.rb set filetype=rspec
+"       autocmd User Rails set ft=rails.ruby
+" augroup END
 
 " just keep it to showcase command definition example. no longer used.
 command -nargs=* Dbundle Dispatch dbundle <args>
