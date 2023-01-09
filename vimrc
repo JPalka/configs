@@ -192,7 +192,7 @@ let g:tmux_navigator_disable_when_zoomed = 1
 " }}}
 
 " FZF config {{{
-let $FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .git \) -prune -o -print'
+let $FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .git -o -name vendor -o -name tmp \) -prune -o -print'
 " }}}
 
 " }}}
