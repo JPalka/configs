@@ -258,30 +258,6 @@ snippet "(\S+)\.Index" ".index do |item| ... end" r
 end
 endsnippet
 
-snippet until "until <expression> ... end"
-until ${1:expression}
-	$0
-end
-endsnippet
-
-snippet Until "begin ... end until <expression>"
-begin
-	$0
-end until ${1:expression}
-endsnippet
-
-snippet while "while <expression> ... end"
-while ${1:expression}
-	$0
-end
-endsnippet
-
-snippet While "begin ... end while <expression>"
-begin
-	$0
-end while ${1:expression}
-endsnippet
-
 snippet begin "begin ... rescue ... end"
 begin
 	$1
@@ -297,10 +273,12 @@ rescue Exception => e
 	${0:# Rescue}
 endsnippet
 
-snippet "\b(case|sw(itch)?)" "case <variable> when <expression> ... end" r
+snippet "case" "case <variable> when <expression> ... end" r
 case ${1:variable}
 when ${2:expression}
-  $0
+  $3
+else
+  $4
 end
 endsnippet
 
@@ -338,5 +316,9 @@ endsnippet
 
 snippet bi "binding.pry"
 binding.pry
+endsnippet
+
+snippet fl "frozen_string_literal: true"
+# frozen_string_literal: true
 endsnippet
 # vim: set ts=2 sw=2 expandtab:

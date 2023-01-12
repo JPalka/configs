@@ -1,4 +1,4 @@
-priority -50
+priority 1
 
 #
 # Global functions
@@ -20,6 +20,8 @@ endglobal
 #
 
 snippet spec "spec file skeleton"
+# frozen_string_literal: true
+
 require '${1:rails}_helper'
 
 RSpec.describe ${2:ClassName} do
@@ -77,14 +79,6 @@ snippet ma "matching"
 matching '$0'
 endsnippet
 
-snippet p "pending"
-pending
-endsnippet
-
-snippet pe "pending('description')"
-pending($0)
-endsnippet
-
 snippet it "it ... do"
 it '$0' do
 end
@@ -107,8 +101,16 @@ snippet itli "it { is_expected.to ... }"
 it { is_expected.to $0 }
 endsnippet
 
-snippet itp "it (pending)"
-it '$0'
+snippet itlivuo "it { is_expected.to validate_uniqueness_of(...) }"
+it { is_expected.to validate_uniqueness_of($0) }
+endsnippet
+
+snippet itliio "it { is_expected.to validate_inclusion_of(...) }"
+it { is_expected.to validate_inclusion_of($0) }
+endsnippet
+
+snippet cr "model = create(:model)"
+$0 = create(:$0)
 endsnippet
 
 snippet dc "described_class" i
