@@ -4,3 +4,7 @@
 [submodule "rtw89"]
 	path = rtw89
 	url = git@github.com:lwfinger/rtw89.git
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+	ignore = dirty

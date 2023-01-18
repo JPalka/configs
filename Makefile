@@ -5,9 +5,6 @@ path = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 ~/.gitconfig:
 	ln -fsb $(path)gitconfig ~/.gitconfig
 
-~/diff-so-fancy:
-	ln -fsb $(path)diff-so-fancy ~/diff-so-fancy
-
 ~/.vim:
 	ln -fsb $(path)vim ~/.vim
 
@@ -21,9 +18,6 @@ path = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 	ln -fsb $(path)zshrc ~/.zshrc
 	ln -fsb $(path)zshrc ~/.zshenv
 
-~/.oh-my-zsh:
-	ln -fsb $(path)oh-my-zsh ~/.oh-my-zsh
-
 ~/.tmux.conf:
 	ln -fsb $(path)tmux.conf ~/.tmux.conf
 
@@ -32,9 +26,6 @@ path = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 
 ~/.vim_backup:
 	ln -fsb $(path)vim_backup ~/.vim_backup
-
-~/.fonts:
-	ln -fsb $(path)fonts ~/.fonts
 
 ~/.config/rofi:
 	ln -fsb $(path)rofi ~/.config/rofi
@@ -45,7 +36,6 @@ vimrc: ~/.vimrc
 zshrc: ~/.zshrc
 diff: ~/diff-so-fancy
 tmux: ~/.tmux.conf
-fonts: ~/.fonts
 rofi: ~/.config/rofi
 .PHONY: i3
 i3:
@@ -58,4 +48,4 @@ regolith:
 	ln -fsb $(path)timewarrior ~/
 	ln -fsb $(path)scripts ~/
 
-all: git vim vimrc zshrc diff tmux fonts
+all: git vim vimrc zshrc diff tmux

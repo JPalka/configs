@@ -1,0 +1,22 @@
+---
+- defaults:
+    link:
+      relink: true
+      create: true
+
+- clean: ["~", "~/.config"]
+
+- link:
+    ~/.gitconfig: gitconfig
+    ~/.vim: vim
+    ~/.vimrc: vimrc
+    ~/.zsh_alias.sh: zsh_alias.sh
+    ~/.zshrc: zshrc
+    ~/.tmux.conf: tmux.conf
+    ~/.gitignore: gitignore
+    ~/.vim_backup: vim_backup
+    ~/.config/rofi: rofi
+    ~/.Xresources-regolith:
+    ~/.config/regolith: regolith
+    ~/scripts: scripts
+
