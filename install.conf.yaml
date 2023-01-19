@@ -19,4 +19,5 @@
     ~/.Xresources-regolith:
     ~/.config/regolith: regolith
     ~/scripts: scripts
+    ~/.config/nvim: nvim
 
