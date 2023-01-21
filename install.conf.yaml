@@ -10,7 +10,7 @@
     ~/.gitconfig: git/gitconfig
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
-    ~/.zsh_alias.sh: zsh/zsh_alias.sh
+    ~/zsh_alias.sh: zsh/zsh_alias.sh
     ~/.zshrc: zsh/zshrc
     ~/.tmux.conf: tmux/tmux.conf
     ~/.gitignore: git/gitignore

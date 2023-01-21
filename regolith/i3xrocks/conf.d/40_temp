@@ -2,4 +2,5 @@
 #
 # Displays temp data
 [temp]
+command=$HOME/scripts/i3xrocks_indicators/temp
 interval=30

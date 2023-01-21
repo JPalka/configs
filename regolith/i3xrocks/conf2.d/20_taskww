@@ -3,7 +3,7 @@
 # Display active taskwarrior tasks
 
 [taskw]
-command=$HOME/scripts/taskw.py
+command=$HOME/scripts/i3xrocks_indicators/taskw.py
 interval=1
 TASKW_TF=true
 TIMEW_TF=true

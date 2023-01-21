@@ -1,0 +1,3 @@
+[taskw]
+command=$HOME/scripts/i3xrocks_indicators/taskw
+interval=5
