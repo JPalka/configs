@@ -20,4 +20,4 @@
     ~/.config/regolith: regolith
     ~/.config/nvim: nvim
     ~/scripts: scripts
-    ~/timewarrior: timewarrior
+    ~/.timewarrior: timewarrior
