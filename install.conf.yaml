@@ -21,3 +21,5 @@
     ~/.config/nvim: nvim
     ~/scripts: scripts
     ~/.timewarrior: timewarrior
+    ~/.task: taskwarrior/task
+    ~/.taskrc: taskwarrior/task/taskrc
