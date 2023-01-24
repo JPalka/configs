@@ -1,4 +1,4 @@
-set nocompatible
+set nocompatible " not needed
 
 " Plugin definitions {{{
 call plug#begin()
@@ -47,34 +47,34 @@ silent! helptags ALL
 
 " General settings {{{
 " Required for operations modifying multiple buffers like rename.
-set hidden
-set shell=zsh
-set cot+=preview
+set hidden " not needed
+set shell=zsh " removed
+set cot+=preview " not needed ?
 set nomodeline " SECOORITY!!!111!1
-set expandtab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set expandtab " not needed?
+set tabstop=2 " not needed
+set softtabstop=2 " not needed
+set shiftwidth=2 " nn
 set smartindent " reconsider this option
-set number
-set relativenumber
-set noerrorbells
-set incsearch
-set scrolloff=8
-set cmdheight=2
+set number " nn
+set relativenumber " nn
+set noerrorbells " nn
+set incsearch " true in nvim
+set scrolloff=8 "set
+set cmdheight=2 " not needed
 set updatetime=4000
 set term=xterm-256color
 set directory=~/.vim_backup//
-set backspace=indent,eol,start
-set ruler
+set backspace=indent,eol,start " not needed
+set ruler " not needed
 set showtabline=2
-set laststatus=2
-set shiftround
+set laststatus=2 " not needed
+set shiftround " reconsider
 set showmatch
 set completeopt=menu,menuone,preview,noselect,noinsert " prevew/popup options seem to be the same
-set confirm
+set confirm " not needed
 setglobal tags=./tags;
-color distinguished
+color distinguished " set
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
 " status line {{{
@@ -227,17 +227,25 @@ let mapleader=" "
 let maplocalleader = "\\"
 
 " nnoremap <silent> gw :s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR>`'
-nnoremap <Leader>t :NERDTreeToggle<CR>
+" done
+nnoremap <Leader>t :NERDTreeToggle<CR> 
+" done
 nnoremap <Leader>f :NERDTreeFind<CR>
+" scrap?
 nnoremap <Leader>F :setlocal foldmethod=syntax<CR>
-nnoremap <Leader>i :IndentLinesToggle<CR>
+" replaced with vtr
 nnoremap <Leader>T :tab term<CR>
+" cant be done in nvim
 nnoremap <Leader>ce :vsplit $MYVIMRC<cr>
 nnoremap <Leader>cr :source $MYVIMRC<cr>
 
+" whatever
 nnoremap <Leader>pp :Dispatch! bundle exec rake<CR>
+" whatever
 nnoremap <Leader>pr :tab Copen<CR>
+" whatever
 nnoremap <Leader>pt :.Rails<CR>
+" TODO:  figure it out
 nnoremap <Leader>ar :Dispatch! bundle exec rubocop -A %<CR>
 
 nnoremap <silent> gd <Plug>(coc-definition)
@@ -247,16 +255,19 @@ nnoremap <silent> gh <Plug>(coc-references)
 
 xnoremap <leader>a <Plug>(coc-codeaction-selected)
 nnoremap <leader>a <Plug>(coc-codeaction-selected)
+" done
 nnoremap <leader>jj :ArgWrap<CR>
 
 " rails specific bindings
 nnoremap <leader>rr :.Rails<CR>
 nnoremap <leader>R :Rails<CR>
+" done
 nnoremap <Leader>rc :Rails log:clear <bar> Rails tmp:clear <bar> Rails assets:clean<CR>
 
 nnoremap <leader>gl :Git log<CR>
 nnoremap <leader>gp :Git pull<CR>
 
+" done
 nnoremap <silent> <Leader>P :call CocAction('format')<cr>
 
 " replace word under cursor
