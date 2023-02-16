@@ -1,7 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
   ensure_installed = {
-    "sumneko_lua",
     "jsonls",
     "yamlls",
     "html",
@@ -22,7 +21,6 @@ local options = require("config.lsp.options")
 require("config.lsp.null-ls").setup(lsp, options)
 require("config.lsp.solargraph").setup(lsp, options)
 require("config.lsp.eslint").setup(lsp, options)
-require("config.lsp.sumneko").setup(lsp, options)
 require("config.lsp.typescript").setup(lsp, options)
 
 local function setup(server, extension)
