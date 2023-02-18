@@ -29,7 +29,7 @@ vim.wo.signcolumn = "yes"
 --Set colorscheme
 vim.o.termguicolors = true
 -- vim.cmd([[colorscheme tokyonight-night]])
-vim.cmd([[colorscheme distinguished]])
+vim.cmd([[colorscheme monokai]])
 
 -- Put new windows below or right
 vim.opt.splitbelow = false

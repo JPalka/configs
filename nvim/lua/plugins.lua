@@ -15,7 +15,9 @@ require("packer").startup(function(use)
 
   -- Theme
   -- use("folke/tokyonight.nvim")
-  use("Lokaltog/vim-distinguished")
+  -- use("Lokaltog/vim-distinguished")
+  -- use("dracula/vim")
+  use('tanvirtin/monokai.nvim')
   use({
     "kyazdani42/nvim-web-devicons",
     module = "nvim-web-devicons",
