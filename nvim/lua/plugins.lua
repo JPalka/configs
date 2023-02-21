@@ -14,10 +14,9 @@ require("packer").startup(function(use)
   use("wbthomason/packer.nvim")
 
   -- Theme
-  -- use("folke/tokyonight.nvim")
-  -- use("Lokaltog/vim-distinguished")
-  -- use("dracula/vim")
-  use('tanvirtin/monokai.nvim')
+  use("Lokaltog/vim-distinguished")
+  use('Abstract-IDE/Abstract-cs')
+  use('folke/tokyonight.nvim')
   use({
     "kyazdani42/nvim-web-devicons",
     module = "nvim-web-devicons",
@@ -188,7 +187,7 @@ require("packer").startup(function(use)
       require("illuminate").configure({
         providers = { "lsp", "treesitter", "regex" },
         delay = 200,
-        filetypes_denylist = { "dirvish", "fugitive" },
+        filetypes_denylist = { "dirvish", "fugitive", "NvimTree" },
         under_cursor = false,
       })
     end,

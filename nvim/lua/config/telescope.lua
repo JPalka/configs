@@ -8,8 +8,8 @@ require("telescope").setup({
         ["<C-j>"] = actions.move_selection_next,
         ["<C-k>"] = actions.move_selection_previous,
         ["<ESC>"] = actions.close,
-        ["<M-t>"] = trouble.open_with_trouble,
-        ["<C-t>"] = trouble.open_selected_with_trouble,
+        -- ["<M-t>"] = trouble.open_with_trouble,
+        -- ["<C-t>"] = trouble.open_selected_with_trouble,
         ["<M-q>"] = actions.send_to_qflist + actions.open_qflist,
         ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
       },
@@ -19,7 +19,7 @@ require("telescope").setup({
     find_files = {
       hidden = true,
       find_command = { "rg", "--files", "--iglob", "!.git", "--hidden" },
-    },
+    }
   },
   extensions = {
     fzy_native = {
@@ -73,4 +73,4 @@ vmap("<leader>\\", function()
 end)
 
 require("telescope").load_extension("dir")
-nmap("<C-\\>", "<cmd>Telescope dir live_grep<CR>")
+nmap("<C-\\>", "<cmd>Telescope live_grep<CR>")

@@ -12,7 +12,7 @@ vim.o.mouse = ""
 vim.o.breakindent = true
 
 vim.o.cmdheight = 2
-vim.o.showtabline = 0
+vim.o.showtabline = 2
 
 --Save undo history
 vim.opt.undofile = true
@@ -28,8 +28,7 @@ vim.wo.signcolumn = "yes"
 
 --Set colorscheme
 vim.o.termguicolors = true
--- vim.cmd([[colorscheme tokyonight-night]])
-vim.cmd([[colorscheme monokai]])
+vim.cmd([[colorscheme tokyonight-night]])
 
 -- Put new windows below or right
 vim.opt.splitbelow = false
