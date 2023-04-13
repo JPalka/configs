@@ -2,6 +2,7 @@
 
 i3-wm.bar.trayoutput: primary
 i3-wm.program.notifications: "/usr/bin/dunst"
+i3-wm.bar.font: pango:Source Code Pro, Symbols Nerd Font 13
 
 i3xrocks.date.format2: "%a %d/%m %T"
 i3xrocks.time.interval: 1

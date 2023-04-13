@@ -596,13 +596,13 @@ font $i3-wm.font
 
 set_from_resource $i3-wm.bar.position i3-wm.bar.position bottom
 set_from_resource $i3-wm.bar.font i3-wm.bar.font pango:Source Code Pro Medium 13, Material Design Icons 13
-set_from_resource $i3-wm.bar.separator i3-wm.bar.separator " "
+set_from_resource $i3-wm.bar.separator i3-wm.bar.separator "|"
 set_from_resource $i3-wm.bar.trayoutput i3-wm.bar.trayoutput primary
 set_from_resource $i3-wm.bar.stripworkspacenumbers i3-wm.bar.stripworkspacenumbers yes
 set_from_resource $i3-wm.bar.mode i3-wm.bar.mode dock
 
 # START SECOND BAR CONFIGURATION
-set_from_resource $i3-wm.bar.status_command2 i3-wm.bar.status_command2 i3xrocks -u ~/.config/regolith/i3xrocks/conf2.d -d /etc/regolith/i3xrocks/conf.d
+set_from_resource $i3-wm.bar.status_command2 i3-wm.bar.status_command2 i3xrocks -u ~/.config/regolith/i3xrocks/conf2.d -d /etc/regolith/i3xrocks/conf2.d
 bar {
   position bottom
   mode $i3-wm.bar.mode

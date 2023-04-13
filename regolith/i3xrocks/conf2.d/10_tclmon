@@ -1,0 +1,7 @@
+# tclmon
+#
+# Display tcl wireless routes status
+
+[tclmon]
+command=tclmon
+interval=5
