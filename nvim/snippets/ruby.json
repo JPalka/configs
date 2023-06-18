@@ -79,5 +79,9 @@
   "binding.pry": {
     "prefix": ["bi"],
     "body": ["binding.pry"]
+  },
+  "require binding.pry": {
+    "prefix": ["rbi"],
+    "body": ["require 'pry'; binding.pry"]
   }
 }
