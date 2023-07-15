@@ -1,9 +1,9 @@
 local function attach_to_pane(pane_number)
-  if pane_number or vim.v.count > 0 then
-    vim.cmd(":VtrAttachToPane " .. (pane_number or vim.v.count))
-  else
-    vim.cmd(":VtrAttachToPane")
-  end
+	if pane_number or vim.v.count > 0 then
+		vim.cmd(":VtrAttachToPane " .. (pane_number or vim.v.count))
+	else
+		vim.cmd(":VtrAttachToPane")
+	end
 end
 
 attach_to_pane(1)

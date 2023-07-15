@@ -76,7 +76,6 @@ vim.wo.relativenumber = true
 vim.wo.number = true
 vim.wo.cursorline = true
 
-
 -- highlight columns above 80
 -- vim.cmd([[
 --   highlight ColorColumn ctermbg=236 guibg=#212121
@@ -136,15 +135,15 @@ util.nmap("<leader>i", ":IndentBlanklineToggle<CR>")
 util.nmap("<leader>rc", ":Rails log:clear <bar> Rails tmp:clear <bar> Rails assets:clean<CR>")
 
 vim.keymap.set("n", "<M-q>", function()
-  for _, win in ipairs(vim.api.nvim_list_wins()) do
-    if vim.api.nvim_win_is_valid(win) then
-      local config = vim.api.nvim_win_get_config(win)
+	for _, win in ipairs(vim.api.nvim_list_wins()) do
+		if vim.api.nvim_win_is_valid(win) then
+			local config = vim.api.nvim_win_get_config(win)
 
-      if config.relative ~= "" then
-        vim.api.nvim_win_close(win, false)
-      end
-    end
-  end
+			if config.relative ~= "" then
+				vim.api.nvim_win_close(win, false)
+			end
+		end
+	end
 end)
 
 vim.cmd([[
