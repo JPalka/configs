@@ -24,3 +24,4 @@
     ~/.task: taskwarrior/task
     ~/.taskrc: taskwarrior/task/taskrc
     ~/.config/alacritty: alacritty
+    ~/.ideavimrc: ideavimrc

@@ -14,3 +14,4 @@ taskwarrior/task/data/undo.data
 solargraph_rails.rb
 solargraph.yml
 vim/plugged/**
+.idea
