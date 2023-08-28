@@ -45,7 +45,7 @@ local builtin = require("telescope.builtin")
 local nmap = require("util").nmap
 local vmap = require("util").vmap
 
--- nmap("<C-p>", builtin.find_files)
+nmap("<C-p>", builtin.find_files)
 nmap("<C-y>", builtin.registers)
 nmap("\\", builtin.live_grep)
 nmap("<C-q>", builtin.buffers)
