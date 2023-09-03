@@ -59,9 +59,9 @@ vim.opt.wrap = true
 vim.opt.pumblend = 10 -- Popup blend
 vim.opt.pumheight = 10
 
---Remap for dealing with word wrap TODO: revisit this
--- util.nnoremap("k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
--- util.nnoremap("j", "v:count == 0 ? 'gj' : 'j'", { expr = true })
+--Remap for dealing with word wrap
+util.nnoremap("k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
+util.nnoremap("j", "v:count == 0 ? 'gj' : 'j'", { expr = true })
 
 -- Highlight on yank
 vim.cmd([[
@@ -106,11 +106,8 @@ util.nnoremap("<C-e>", ":e<CR>")
 util.nnoremap("<space><space>", "<C-^>")
 
 -- convenience mappings
--- TODO: revise
--- util.nnoremap("H", "^")
--- util.nnoremap("L", "$")
--- util.nnoremap("0", "^")
--- util.nnoremap("^", "0")
+util.nnoremap("H", "^")
+util.nnoremap("L", "$")
 
 util.nnoremap("Q", "<NOP>")
 
@@ -128,11 +125,14 @@ util.nmap("[Q", ":cfirst<CR>")
 
 -- IndentLines
 util.nmap("<leader>i", ":IndentBlanklineToggle<CR>")
--- copy to system clipboard
--- TODO: cant use it on dragon :<
--- util.nmap("<Leader>y", '"+y')
+
+-- copy to system clipboard 
+util.nmap("<Leader>y", '"+y')
 
 util.nmap("<leader>rc", ":Rails log:clear <bar> Rails tmp:clear <bar> Rails assets:clean<CR>")
+
+util.nnoremap("<leader>bp", "obinding.pry<ESC>", { buffer = true })
+util.nnoremap("<leader>br", ":g/binding.pry/d<CR>", { buffer = true })
 
 vim.keymap.set("n", "<M-q>", function()
 	for _, win in ipairs(vim.api.nvim_list_wins()) do

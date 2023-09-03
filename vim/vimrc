@@ -245,7 +245,6 @@ nnoremap <Leader>pp :Dispatch! bundle exec rake<CR>
 nnoremap <Leader>pr :tab Copen<CR>
 " whatever
 nnoremap <Leader>pt :.Rails<CR>
-" TODO:  figure it out
 nnoremap <Leader>ar :Dispatch! bundle exec rubocop -A %<CR>
 
 nnoremap <silent> gd <Plug>(coc-definition)
@@ -326,8 +325,6 @@ command -nargs=* Dbundle Dispatch dbundle <args>
 " }}}
 
 " VIM TUTORIAL STUFF {{{
-
-" TODO: Add abbrevations? although they seem like a footgun
 
 " remove these probably
 " vnoremap <leader>" <esc>`<i'<esc>`>la'<esc>

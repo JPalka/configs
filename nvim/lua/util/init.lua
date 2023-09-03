@@ -27,7 +27,6 @@ local map = function(mode, key, cmd, opts, defaults)
   return vim.keymap.set(mode, key, cmd, opts)
 end
 
--- TODO: revisit, maybe simplify mapping to always provide mode
 function M.nmap(key, cmd, opts)
   return map("n", key, cmd, opts)
 end

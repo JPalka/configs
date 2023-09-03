@@ -17,7 +17,6 @@ function M.setup()
   bmap("n", "gd", "<CMD>Lspsaga peek_definition<CR>")
   bmap("n", "gr", "<CMD>Lspsaga rename<CR>")
   bmap("n", "<leader>o", "<CMD>Lspsaga outline<CR>")
-  -- TODO: need to install markdown for treesitter for it to work
   bmap("n", "K", "<CMD>Lspsaga hover_doc<CR>")
   bmap("n", "gs", vim.lsp.buf.signature_help)
 
