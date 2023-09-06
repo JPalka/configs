@@ -34,55 +34,6 @@ return {
       "princejoogie/dir-telescope.nvim",
       "folke/trouble.nvim",
     },
-    keys = {
-      -- add a keymap to browse plugin files
-      -- stylua: ignore
-      {
-        "<leader>fp",
-        function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
-        desc = "Find Plugin File",
-      },
-      {
-        "<C-p>",
-        function() require("telescope.builtin").find_files() end,
-        desc = "Search files",
-        mode = "n",
-      },
-      {
-        "<C-\\>",
-        function() require("telescope.builtin").live_grep() end,
-        desc = "Live grep",
-        mode = "n",
-      },
-      {
-        "<C-b>",
-        function()
-          require("telescope.builtin").git_branches({
-            attach_mappings = function(_, map)
-              map("i", "<c-d>", actions.git_delete_branch)
-              return true
-            end,
-          })
-        end,
-        mode = "n",
-      },
-      {
-        "<leader>\\",
-        function()
-          require("telescope.builtin").grep_string({ default_text = vim.fn.expand("<cword>") })
-        end,
-        desc = "grep word under cursor",
-        mode = "v",
-      },
-      {
-        "<leader>\\",
-        function()
-          require("telescope.builtin").grep_string({ default_text = get_visual_selection() })
-        end,
-        desc = "grep selection",
-        mode = "v",
-      },
-    },
     config = function()
       local opts = {
         defaults = {

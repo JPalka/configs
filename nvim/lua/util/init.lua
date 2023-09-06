@@ -47,6 +47,10 @@ function M.nnoremap(key, cmd, opts)
   return map("n", key, cmd, opts, { noremap = true })
 end
 
+function M.vnoremap(key, cmd, opts)
+  return map("v", key, cmd, opts, { noremap = true })
+end
+
 function M.inoremap(key, cmd, opts)
   return map("i", key, cmd, opts, { noremap = true })
 end

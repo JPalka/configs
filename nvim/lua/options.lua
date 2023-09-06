@@ -34,14 +34,6 @@ vim.cmd([[colorscheme tokyonight-night]])
 vim.opt.splitbelow = false
 vim.opt.splitright = true
 
---Remap space as leader key
-vim.keymap.set("", "<Space>", "<Nop>", { noremap = true, silent = true })
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
---Remap jk as <esc>
-util.inoremap("jk", "<esc>")
-
 -- disable swapfiles and backup
 vim.o.swapfile = false
 vim.o.backup = false
@@ -58,10 +50,6 @@ vim.opt.wrap = true
 
 vim.opt.pumblend = 10 -- Popup blend
 vim.opt.pumheight = 10
-
---Remap for dealing with word wrap
-util.nnoremap("k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
-util.nnoremap("j", "v:count == 0 ? 'gj' : 'j'", { expr = true })
 
 -- Highlight on yank
 vim.cmd([[
@@ -98,58 +86,6 @@ vim.opt.lazyredraw = true
 
 -- auto-resize panes
 vim.cmd([[ autocmd VimResized * :wincmd = ]])
-
-util.nnoremap("<leader>w", ":w<CR>")
-util.nnoremap("<leader>q", ":q<CR>")
-util.nnoremap("<C-c>", ":Bdelete<CR>")
-util.nnoremap("<C-e>", ":e<CR>")
-util.nnoremap("<space><space>", "<C-^>")
-
--- convenience mappings
-util.nnoremap("H", "^")
-util.nnoremap("L", "$")
-
-util.nnoremap("Q", "<NOP>")
-
--- shell like jump mappings
-util.inoremap("<C-e>", "<END>")
-util.inoremap("<C-a>", "<C-o>^")
-util.inoremap("<C-b>", "<LEFT>")
-util.inoremap("<C-f>", "<RIGHT>")
-
--- quickfix
-util.nmap("]q", ":cnext<CR>")
-util.nmap("[q", ":cprev<CR>")
-util.nmap("]Q", ":clast<CR>")
-util.nmap("[Q", ":cfirst<CR>")
-
--- IndentLines
-util.nmap("<leader>i", ":IndentBlanklineToggle<CR>")
-
--- copy to system clipboard 
-util.nmap("<Leader>y", '"+y')
-
-util.nmap("<leader>rc", ":Rails log:clear <bar> Rails tmp:clear <bar> Rails assets:clean<CR>")
-
-util.nnoremap("<leader>bp", "obinding.pry<ESC>", { buffer = true })
-util.nnoremap("<leader>br", ":g/binding.pry/d<CR>", { buffer = true })
-
-vim.keymap.set("n", "<M-q>", function()
-	for _, win in ipairs(vim.api.nvim_list_wins()) do
-		if vim.api.nvim_win_is_valid(win) then
-			local config = vim.api.nvim_win_get_config(win)
-
-			if config.relative ~= "" then
-				vim.api.nvim_win_close(win, false)
-			end
-		end
-	end
-end)
-
-vim.cmd([[
-  cnoremap <C-a> <Home>
-  cnoremap <C-e> <END>
-]])
 
 -- go to last loc when opening a buffer
 vim.cmd([[
