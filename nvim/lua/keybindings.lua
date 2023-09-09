@@ -157,3 +157,4 @@ util.nnoremap("<leader>R", ":TestFile<cr>")
 util.nnoremap("<leader>rf", ":TestSuite<cr>")
 util.nnoremap("<Leader>rl", ":TestLast<CR>")
 
+util.nnoremap("<Leader>ar", ":! bundle exec rubocop -A %<CR>")
