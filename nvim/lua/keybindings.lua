@@ -102,7 +102,6 @@ vim.keymap.set("o", "ar", "a[")
 vim.keymap.set("o", "ia", "i<")
 vim.keymap.set("o", "aa", "a<")
 
-
 -- telescope bindings
 util.nnoremap("<leader>fp", function()
     require("telescope.builtin").find_files({

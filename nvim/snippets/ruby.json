@@ -83,5 +83,9 @@
   "require binding.pry": {
     "prefix": ["rbi"],
     "body": ["require 'pry'; binding.pry"]
+  },
+  "transaction": {
+    "prefix": ["tran"],
+    "body": ["ActiveRecord::Transaction.do\n$0\nend"]
   }
 }
