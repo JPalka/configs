@@ -34,3 +34,4 @@ setup(
 setup("tailwindcss")
 setup("html")
 setup("yamlls")
+setup("lua_ls")
