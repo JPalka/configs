@@ -49,6 +49,6 @@ return {
       },
       endwise = { enable = true },
       autotag = { enable = true },
-  })
+    })
   end,
 }
