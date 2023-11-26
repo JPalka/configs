@@ -7,9 +7,7 @@ require("mason-lspconfig").setup({
     "tsserver",
   },
 })
-require("fidget").setup({
-   text = { spinner = "dots" }
-})
+require("fidget").setup()
 
 require("config.lsp.diagnostics").setup()
 require("config.lsp.handlers").setup()
@@ -32,6 +30,7 @@ setup(
 )
 -- TODO: fix tailwind
 setup("tailwindcss")
+-- setup("tailwindcss", { root_dir = lsp.util.root_pattern("tailwind.config.js") })
 setup("html")
 setup("yamlls")
 setup("lua_ls")

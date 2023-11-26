@@ -47,15 +47,15 @@ util.nnoremap("<leader>bp", "obinding.pry<ESC>", { buffer = true })
 util.nnoremap("<leader>br", ":g/binding.pry/d<CR>", { buffer = true })
 
 vim.keymap.set("n", "<M-q>", function()
-	for _, win in ipairs(vim.api.nvim_list_wins()) do
-		if vim.api.nvim_win_is_valid(win) then
-			local config = vim.api.nvim_win_get_config(win)
+  for _, win in ipairs(vim.api.nvim_list_wins()) do
+    if vim.api.nvim_win_is_valid(win) then
+      local config = vim.api.nvim_win_get_config(win)
 
-			if config.relative ~= "" then
-				vim.api.nvim_win_close(win, false)
-			end
-		end
-	end
+      if config.relative ~= "" then
+        vim.api.nvim_win_close(win, false)
+      end
+    end
+  end
 end)
 
 vim.cmd([[
@@ -102,37 +102,32 @@ vim.keymap.set("o", "ar", "a[")
 vim.keymap.set("o", "ia", "i<")
 vim.keymap.set("o", "aa", "a<")
 
--- telescope bindings
-util.nnoremap("<leader>fp", function()
-    require("telescope.builtin").find_files({
-      cwd = require("lazy.core.config").options.root
-    })
-  end
-)
 util.nnoremap("<C-p>", function()
-    require("telescope.builtin").find_files()
-  end
+  require("telescope.builtin").find_files()
+end
 )
 util.nnoremap("<C-\\>", function()
-    require("telescope.builtin").live_grep()
-  end
+  require("telescope.builtin").live_grep()
+end
 )
 util.nnoremap("<C-b>", function()
-    require("telescope.builtin").git_branches({
-      attach_mappings = function(_, map)
-        map("i", "<c-d>", require("telescope.actions").git_delete_branch)
-        return true
-      end,
-    })
-  end
+  require("telescope.builtin").git_branches({
+    attach_mappings = function(_, map)
+      map("i", "<c-d>", require("telescope.actions").git_delete_branch)
+      return true
+    end,
+  })
+end
 )
 util.nnoremap("<leader>\\", function()
-    require("telescope.builtin").grep_string({ default_text = vim.fn.expand("<cword>") })
-  end
+  require("telescope.builtin").grep_string({ default_text = vim.fn.expand("<cword>") })
+end
 )
+
+-- TODO: fix get_visual_selection
 util.vnoremap("<leader>\\", function()
-    require("telescope.builtin").grep_string({ default_text = get_visual_selection() })
-  end
+  require("telescope.builtin").grep_string({ default_text = get_visual_selection() })
+end
 )
 
 -- tmux.nvim bindings
@@ -157,3 +152,14 @@ util.nnoremap("<leader>rf", ":TestSuite<cr>")
 util.nnoremap("<Leader>rl", ":TestLast<CR>")
 
 util.nnoremap("<Leader>ar", ":! bundle exec rubocop -A %<CR>")
+
+-- harpoon related bindings
+util.nnoremap("<leader>ha", function()
+  require("harpoon.mark").add_file()
+end
+)
+
+util.nnoremap("<leader>hh", function()
+  require("harpoon.ui").toggle_quick_menu()
+end
+)
