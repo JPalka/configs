@@ -163,3 +163,22 @@ util.nnoremap("<leader>hh", function()
   require("harpoon.ui").toggle_quick_menu()
 end
 )
+
+-- vimwiki related settings
+
+-- vim.g.vimwiki_folding = 'list' -- shit aint working yo
+util.nmap("<leader>vw", "<Plug>VimwikiIndex<CR>")
+util.nmap("<leader>vt", "<Plug>VimwikiTabIndex<CR>")
+util.nmap("<leader>vs", "<Plug>VimwikiUISelect")
+util.nmap("<leader>vi", "<Plug>VimwikiDiaryIndex<CR>")
+util.nmap("<leader>vii", "<Plug>VimwikiDiaryGenerateLinks<CR>")
+util.nmap("<leader>v<leader>v", "<Plug>VimwikiMakeDiaryNote<CR>")
+util.nmap("<leader>v<leader>t", "<Plug>VimwikiTabMakeDiaryNote<CR>")
+util.nmap("<leader>v<leader>y", "<Plug>VimwikiMakeYesterdayDiaryNote<CR>")
+util.nmap("<leader>v<leader>m", "<Plug>VimwikiMakeTomorrowDiaryNote<CR>")
+util.nmap("<leader>vc", "<Plug>VimwikiColorizeNormal")
+util.nmap("<leader>vr", "<Plug>VimwikiRenameFile")
+util.nmap("<leader>vd", "<Plug>VimwikiDeleteFile")
+util.nmap("<leader>vn", "<Plug>VimwikiGoto")
+util.nmap("<leader>vh", "<Plug>Vimwiki2HTMLBrowse<CR>")
+util.nmap("<leader>vhh", "<Plug>Vimwiki2HTML<CR>")

@@ -15,3 +15,4 @@ solargraph_rails.rb
 solargraph.yml
 vim/plugged/**
 .idea
+app/services/dev_tools.rb

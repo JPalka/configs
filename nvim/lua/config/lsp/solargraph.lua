@@ -3,8 +3,8 @@ local M = {}
 function M.setup(lsp, options)
   lsp.solargraph.setup(vim.tbl_extend("force", options, {
     root_dir = lsp.util.root_pattern(".git"),
-    cmd = { "bundle", "exec", "solargraph", "stdio" },
-    settings = { solargraph = { useBundler = true } },
+    cmd = { "solargraph", "stdio" },
+    settings = { solargraph = { useBundler = false } },
     filetypes = { "ruby" },
     flags = { debounce_text_changes = 150 },
   }))
