@@ -19,7 +19,7 @@ return {
         section_separators = { left = "", right = "" },
         disabled_filetypes = {},
         always_divide_middle = true,
-        globalstatus = true,
+        globalstatus = false,
       },
       sections = {
         lualine_a = { "mode" },
@@ -69,30 +69,30 @@ return {
         lualine_y = { "progress" },
         lualine_z = { "location" },
       },
-      winbar = {
-        lualine_c = {
-          {
-            filename_with_icon,
-            file_status = true,
-            newfile_status = false,
-            path = 1,
-            colored = true,
-            separator = "",
-            padding = 0,
-          },
-        },
-      },
-      inactive_winbar = {
-        lualine_c = {
-          {
-            filename_with_icon,
-            file_status = true,
-            newfile_status = false,
-            path = 1,
-            colored = true,
-          },
-        },
-      },
+      -- winbar = {
+      --   lualine_c = {
+      --     {
+      --       filename_with_icon,
+      --       file_status = true,
+      --       newfile_status = false,
+      --       path = 1,
+      --       colored = true,
+      --       separator = "",
+      --       padding = 0,
+      --     },
+      --   },
+      -- },
+      -- inactive_winbar = {
+      --   lualine_c = {
+      --     {
+      --       filename_with_icon,
+      --       file_status = true,
+      --       newfile_status = false,
+      --       path = 1,
+      --       colored = true,
+      --     },
+      --   },
+      -- },
       extensions = {},
     })
   end,
