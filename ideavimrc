@@ -26,6 +26,9 @@ map Q gq
 
 map <C-w>\ <Action>(SplitVertically)
 map <C-w>- <Action>(SplitHorizontally)
+map <leader>w :w<CR>
+map <leader>q :q<CR>
+map <space><space> <C-^>
 
 map <leader>gt <Action>(GotoRelated)
 map <Leader>ce :vsplit ~/.ideavimrc<CR>
@@ -44,6 +47,7 @@ map <leader>R <Action>(RunClass)
 Plug 'machakann/vim-highlightedyank'
 " Commentary plugin
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
