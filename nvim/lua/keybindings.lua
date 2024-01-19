@@ -1,4 +1,5 @@
 local util = require("util")
+local wk = require("which-key")
 
 --Remap space as leader key
 vim.keymap.set("", "<Space>", "<Nop>", { noremap = true, silent = true })
@@ -182,3 +183,6 @@ util.nmap("<leader>vd", "<Plug>VimwikiDeleteFile")
 util.nmap("<leader>vn", "<Plug>VimwikiGoto")
 util.nmap("<leader>vh", "<Plug>Vimwiki2HTMLBrowse<CR>")
 util.nmap("<leader>vhh", "<Plug>Vimwiki2HTML<CR>")
+
+wk.register({
+})

@@ -22,9 +22,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
+vim.g.vimwiki_map_prefix = "<Leader>v"
 
 require("builtins")
-require("keybindings")
 require("lazy").setup(
   "plugins",
   {
@@ -33,6 +33,7 @@ require("lazy").setup(
     }
   }
 )
+require("keybindings")
 require("options")
 
 vim.cmd [[

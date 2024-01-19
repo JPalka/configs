@@ -84,6 +84,8 @@ vim.wo.cursorline = true
 -- don't redraw window on running macros
 vim.opt.lazyredraw = true
 
+vim.o.timeoutlen = 500
+
 -- auto-resize panes
 vim.cmd([[ autocmd VimResized * :wincmd = ]])
 
