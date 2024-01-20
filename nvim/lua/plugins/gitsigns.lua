@@ -4,7 +4,7 @@ local nnoremap = require("util").nnoremap
 
 return {
   "lewis6991/gitsigns.nvim",
-  dependencies = { "nvim-lua/plenary.nvim" },
+  dependencies = { "nvim-lua/plenary.nvim", "folke/which-key.nvim" },
   config = function()
     require("gitsigns").setup({
       signs = {
@@ -46,6 +46,7 @@ return {
       max_file_length = 5000,
       on_attach = function()
         local gs = package.loaded.gitsigns
+        local wk = require("which-key")
 
         -- Navigation
         nnoremap("]h", function()
@@ -68,12 +69,18 @@ return {
           return "<Ignore>"
         end, { expr = true })
 
+        wk.register({
+          g = {
+            p = { gs.preview_hunk, "preview hunk" },
+            r = { gs.reset_hunk, "reset hunk" },
+            d = { gs.toggle_deleted, "toggle view deleted" },
+          }
+        }, { prefix = "<leader>" })
         -- Actions
-        -- TODO: rebind and use those mapping cause they kewl
         -- nnoremap("<leader>hs", gs.stage_hunk)
         -- nnoremap("<leader>hu", gs.reset_hunk)
         -- nnoremap("<leader>hU", gs.undo_stage_hunk)
-        -- nnoremap("<leader>hp", gs.preview_hunk)
+        -- nnoremap("<leader>gp", gs.preview_hunk)
         -- nnoremap("<leader>td", gs.toggle_deleted)
         -- nnoremap("<leader>hR", gs.reset_buffer)
         -- nnoremap("<leader>hd", gs.diffthis)

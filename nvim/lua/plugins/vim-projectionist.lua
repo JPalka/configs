@@ -1,3 +1,4 @@
+-- TODO: fix projections to work with any kind of stuff 
 return {
   {
     "tpope/vim-projectionist",

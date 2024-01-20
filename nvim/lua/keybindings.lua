@@ -97,7 +97,6 @@ util.noremap({ "i", "v" }, "<F2>3", function()
   end
 end)
 
--- nvim surround keymaps TODO: see what they actually do
 vim.keymap.set("o", "ir", "i[")
 vim.keymap.set("o", "ar", "a[")
 vim.keymap.set("o", "ia", "i<")
@@ -125,12 +124,10 @@ util.nnoremap("<leader>\\", function()
 end
 )
 
--- TODO: fix get_visual_selection
 util.vnoremap("<leader>\\", function()
-  require("telescope.builtin").grep_string({ default_text = get_visual_selection() })
+  require("telescope.builtin").grep_string({ default_text = require("util/selection").get_visual_selection() })
 end
 )
-
 -- tmux.nvim bindings
 util.nnoremap("<C-h>", function() require("tmux").move_left() end)
 util.nnoremap("<C-l>", function() require("tmux").move_right() end)
