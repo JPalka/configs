@@ -6,6 +6,7 @@ function M.setup(_, options)
   nls.setup({
     sources = {
       nls.builtins.formatting.prettierd,
+      nls.builtins.diagnostics.credo
       -- nls.builtins.diagnostics.codespell,
       -- nls.builtins.formatting.codespell,
     },

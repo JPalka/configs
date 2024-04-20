@@ -16,3 +16,4 @@ solargraph.yml
 vim/plugged/**
 .idea
 app/services/dev_tools.rb
+.elixir_ls
