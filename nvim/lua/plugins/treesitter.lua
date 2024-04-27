@@ -17,6 +17,7 @@ return {
         "bash",
         "css",
         "elixir",
+        "eex",
         "go",
         "html",
         "http",
