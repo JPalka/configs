@@ -21,6 +21,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 vim.g.vimwiki_map_prefix = "<Leader>v"
 
 require("builtins")

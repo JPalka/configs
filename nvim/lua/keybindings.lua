@@ -3,8 +3,6 @@ local wk = require("which-key")
 
 --Remap space as leader key
 vim.keymap.set("", "<Space>", "<Nop>", { noremap = true, silent = true })
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 
 --Remap jk as <esc>
 util.inoremap("jk", "<esc>")
