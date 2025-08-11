@@ -11,8 +11,8 @@ set scrolloff=5
 
 " Do incremental searching.
 set incsearch
-set number 
-set relativenumber 
+set number
+set relativenumber
 set scrolloff=8
 set ideajoin
 " set ideaput
@@ -26,6 +26,8 @@ map Q gq
 
 map <C-w>\ <Action>(SplitVertically)
 map <C-w>- <Action>(SplitHorizontally)
+" maybe just map in in rubymine
+map <leader><esc> <Action>(HideAllWindows)
 map <leader>w :w<CR>
 map <leader>q :q<CR>
 map <space><space> <C-^>
